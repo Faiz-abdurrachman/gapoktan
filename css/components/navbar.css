@@ -1,0 +1,151 @@
+/* ─── Navbar (Seed Perfect Match) ────────────────────── */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: var(--sp-6) var(--section-px);
+  pointer-events: none; /* Let clicks pass through the empty space */
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+/* Floating Pill Shape */
+.nav-pill {
+  pointer-events: auto;
+  background: rgba(180, 180, 180, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 var(--sp-6);
+}
+
+.nav-pill-left {
+  gap: var(--sp-8);
+}
+
+.nav-pill-right {
+  gap: var(--sp-4);
+}
+
+/* Logo */
+.logo {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--seed-text-light); /* White text in the pill */
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+}
+
+/* Navigation Links */
+.nav-list {
+  display: none; /* Hidden on mobile */
+  gap: var(--sp-8);
+}
+
+@media (min-width: 1024px) {
+  .nav-list {
+    display: flex;
+  }
+}
+
+.nav-link {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--seed-text-light);
+  transition: opacity var(--transition-fast);
+}
+
+.nav-link:hover {
+  opacity: 0.7;
+}
+
+/* Active State (Seed style might bold it or use a dot, let's keep it clean) */
+.nav-link.active {
+  font-weight: var(--weight-bold);
+}
+
+/* CTA Button in Navbar */
+.nav-cta-text {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  color: var(--seed-text-light);
+  margin-right: var(--sp-4);
+}
+
+.nav-btn {
+  background: var(--bg-white);
+  color: var(--seed-text-dark);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.nav-btn:hover {
+  transform: scale(1.02);
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+  background: rgba(180, 180, 180, 0.4);
+  backdrop-filter: blur(12px);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--seed-text-light);
+}
+
+@media (min-width: 1024px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+/* Dark Mode Override for Subpages where background might be light */
+.header.dark-mode .nav-pill,
+.header.dark-mode .menu-toggle {
+    background: rgba(0, 0, 0, 0.05); /* very light shadow/glass */
+}
+.header.dark-mode .logo,
+.header.dark-mode .nav-link,
+.header.dark-mode .nav-cta-text {
+    color: var(--seed-text-dark);
+}
+.header.dark-mode .menu-toggle span {
+    background: var(--seed-text-dark);
+}
+.header.dark-mode .nav-btn {
+    background: var(--seed-text-dark);
+    color: var(--seed-text-light);
+}

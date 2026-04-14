@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrowisata — Gapoktan Ngudi Luhur</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS Stack -->
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/ui.css">
+    <link rel="stylesheet" href="css/pages/agrowisata.css">
+</head>
+<body class="bg-light">
+
+    <!-- [S0] HEADER / NAVBAR -->
+    <header class="header dark-mode" id="navbar">
+        <div class="nav-container">
+            <div class="nav-pill nav-pill-left">
+                <a href="/" class="logo">
+                    <span style="font-weight: 600;">Ngudi Luhur</span>
+                    <span style="display:inline-block; width: 6px; height: 6px; background:currentColor; border-radius:50%; margin-left:2px;"></span>
+                </a>
+                
+                <nav class="nav-list ms-8">
+                    <a href="ekspor.html" class="nav-link">Ekspor</a>
+                    <a href="umkm.html" class="nav-link">UMKM</a>
+                    <a href="agrowisata.html" class="nav-link active">Agrowisata</a>
+                </nav>
+            </div>
+
+            <div class="nav-pill nav-pill-right hidden-mobile">
+                <span class="nav-cta-text">Reservasi</span>
+                <a href="#booking" class="nav-btn">Form Reservasi</a>
+            </div>
+            
+            <button class="menu-toggle" id="hamburger" aria-label="Buka Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main style="padding-top: 120px;">
+        <section class="section text-center max-w-xl mx-auto fade-up">
+            <span class="label-pill">WISATA EDUKASI</span>
+            <h1 class="text-5xl mb-6">Nikmati Warisan Merapi.</h1>
+            <p class="text-content mb-12">Rasakan pengalaman autentik bertani salak di lereng Gunung Merapi. Nikmati udara segar, edukasi budidaya, dan manisnya buah langsung dari pohonnya.</p>
+        </section>
+
+        <!-- [A2] PAKET WISATA -->
+        <section class="section bg-light" style="padding-top: 0;">
+            <div class="container grid grid-3 gap-8">
+                <!-- Edukasi -->
+                <div class="card solid fade-up">
+                    <div class="card-body">
+                        <span class="text-2xl mb-4 block">🎓</span>
+                        <h3 class="mb-4 text-xl">Edukasi Budidaya</h3>
+                        <p class="text-sm text-content mb-6">Belajar alur operasional salak dari bibit hingga panen.</p>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-opacity-80">Mulai Rp 50.000 / pax</span>
+                    </div>
+                </div>
+
+                <!-- Wisata Petik -->
+                <div class="card solid fade-up delay-100">
+                    <div class="card-body">
+                        <span class="text-2xl mb-4 block">🧺</span>
+                        <h3 class="mb-4 text-xl">Petik Buah</h3>
+                        <p class="text-sm text-content mb-6">Asyiknya petik dan makan sepuasnya langsung di kebun.</p>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-opacity-80">Mulai Rp 25.000 / pax</span>
+                    </div>
+                </div>
+
+                <!-- Studi Banding -->
+                <div class="card solid fade-up delay-200">
+                    <div class="card-body">
+                        <span class="text-2xl mb-4 block">🏢</span>
+                        <h3 class="mb-4 text-xl">Kunjungan Dinas</h3>
+                        <p class="text-sm text-content mb-6">Pelajari sistem dan standar mutu ekspor kami.</p>
+                        <span class="text-xs font-semibold uppercase tracking-widest text-opacity-80">Hubungi untuk Info</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [A4] BOOKING FORM -->
+        <section id="booking" class="section">
+            <div class="container max-w-xl mx-auto fade-up">
+                <div class="card solid" style="padding: 32px;">
+                    <h2 class="text-2xl mb-6">Buat Reservasi</h2>
+                    <form id="booking-form" class="grid gap-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase mb-2">Nama Lengkap</label>
+                            <input type="text" name="name" class="form-input" required>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-full">
+                                <label class="block text-xs font-bold uppercase mb-2">Tanggal</label>
+                                <input type="date" name="date" class="form-input" required>
+                            </div>
+                            <div class="w-full">
+                                <label class="block text-xs font-bold uppercase mb-2">Jumlah Orang</label>
+                                <input type="number" name="pax" class="form-input" min="1" value="1" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase mb-2">Paket</label>
+                            <select name="package" class="form-input" required>
+                                <option value="Edukasi">Edukasi Budidaya</option>
+                                <option value="Petik Buah">Wisata Petik Buah</option>
+                                <option value="Studi Banding">Studi Banding / Kunjungan Dinas</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full mt-4">Kirim via WhatsApp</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- JS Stack -->
+    <script src="js/main.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>

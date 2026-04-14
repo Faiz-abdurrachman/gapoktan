@@ -1,0 +1,73 @@
+:root {
+  /* ─── Seed.com Color Palette ───────────────────────── */
+  --seed-bg-light   : #f6f5f1; /* The soft off-white background */
+  --seed-bg-dark    : #153921; /* The intense dark green background */
+  --seed-bg-dark-elevated: #1e4a2c; /* Slightly lighter flat green */
+  
+  --seed-text-dark  : #153921;
+  --seed-text-light : #ffffff;
+  
+  --seed-primary    : #153921;
+  --seed-secondary  : #f6f5f1;
+
+  /* ─── Ngudi Luhur Accents ──────────────────────────── */
+  --orange-salak    : #E07B39; /* Keeping but using sparingly */
+  
+  /* ─── Background ───────────────────────────────────── */
+  --bg-page         : var(--seed-bg-light);
+  --bg-white        : #ffffff;
+  --bg-dark         : var(--seed-bg-dark);
+
+  /* ─── Typography (Strictly Sans-Serif) ─────────────── */
+  --font-sans     : 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  --font-display    : var(--font-sans);
+  --font-body       : var(--font-sans);
+
+  --text-xs         : 0.75rem;    /* 12px */
+  --text-sm         : 0.875rem;   /* 14px */
+  --text-base       : 1rem;       /* 16px */
+  --text-lg         : 1.125rem;   /* 18px */
+  --text-xl         : 1.25rem;    /* 20px */
+  --text-2xl        : 1.5rem;     /* 24px */
+  --text-3xl        : 2rem;       /* 32px */
+  --text-4xl        : 2.5rem;     /* 40px */
+  --text-5xl        : 3.5rem;     /* 56px */
+  --text-6xl        : clamp(2.5rem, 6vw, 4.2rem); /* Large Hero Titles */
+
+  --leading-tight   : 1.1;
+  --leading-normal  : 1.6;
+  --tracking-tight  : -0.04em;  /* Tighter tracking for elegance */
+  --tracking-wide   : 0.05em;
+
+  --weight-regular  : 400;
+  --weight-medium   : 500;
+  --weight-semibold : 600;
+
+  /* ─── Spacing ──────────────────────────────────────── */
+  --sp-1   : 0.25rem;
+  --sp-2   : 0.5rem;
+  --sp-3   : 0.75rem;
+  --sp-4   : 1rem;
+  --sp-6   : 1.5rem;
+  --sp-8   : 2rem;
+  --sp-10  : 2.5rem;
+  --sp-12  : 3rem;
+  --sp-16  : 4rem;
+  --sp-24  : 6rem;
+  --sp-32  : 8rem;
+
+  --container-max   : 1200px;
+  --section-py      : clamp(4rem, 8vw, 8rem);
+  --section-px      : clamp(1rem, 5vw, 2.5rem);
+
+  /* ─── Border Radius ────────────────────────────────── */
+  --radius-sm       : 8px;
+  --radius-md       : 16px;
+  --radius-lg       : 40px; /* Big rounded corners observed */
+  --radius-pill     : 9999px; /* For buttons and navbar */
+
+  /* ─── Transitions ──────────────────────────────────── */
+  --transition-fast : 150ms ease;
+  --transition-base : 300ms ease;
+}

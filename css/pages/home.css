@@ -1,0 +1,128 @@
+'/  * ─── Homepage Specific Styles (Seed Perfect Match) ──── */
+
+/* ─── [S0] Navbar Specific Override ─────────────────── */
+.header .logo { color: var(--seed-text-dark); }
+.header .nav-link { color: var(--seed-text-dark); }
+.header .menu-toggle span { background: var(--seed-text-dark); }
+
+/* ─── [S1] Hero Section ─────────────────────────────── */
+
+.hero {
+  position: relative;
+  background-color: var(--seed-bg-light);
+  border-bottom-left-radius: var(--radius-lg);
+  border-bottom-right-radius: var(--radius-lg);
+  /* Generous padding for the floating navbar and Seed aesthetic */
+  padding-top: calc(var(--sp-32) + 80px); 
+  padding-bottom: var(--sp-24);
+  z-index: 2; /* Sits above the dark section below it */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.hero-layout {
+  display: flex;
+  flex-direction: column-reverse; /* Image top, text bottom on mobile */
+  gap: var(--sp-12);
+}
+
+@media (min-width: 1024px) {
+  .hero-layout {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 550px;
+}
+
+.hero-title {
+  margin-bottom: var(--sp-6);
+  font-size: var(--text-6xl);
+  line-height: var(--leading-tight);
+}
+
+.hero-subtitle {
+  margin-bottom: var(--sp-10);
+  font-size: var(--text-lg);
+  max-width: 450px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-6);
+  flex-wrap: wrap;
+}
+
+.hero-image-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.hero-image-wrap img {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  border-radius: 120px 40px 120px 40px; /* highly stylized organic pill shape */
+  /* Removed cheap paddings and shadows to stay flat and smooth */
+}
+
+/* ─── [S2] Impact Section (The Dark Sub-layer) ──────── */
+
+/* Notice how Seed has a dark green section sitting 'behind' the hero's curves */
+.impact {
+  background-color: var(--seed-bg-dark);
+  padding-top: var(--sp-32); /* plenty of padding to tuck under the hero */
+  padding-bottom: var(--sp-24);
+  margin-top: -60px; /* pull it up so it slides under the hero's radius */
+  z-index: 1;
+  position: relative;
+}
+
+.impact-header h2 {
+    color: var(--seed-text-light);
+}
+
+.counter-item {
+  color: var(--seed-text-light);
+  /* No visible border or background on Seed's dark section, just clean text */
+  margin-bottom: var(--sp-6);
+}
+
+.counter-number {
+  font-family: var(--font-display);
+  font-size: var(--text-5xl);
+  font-weight: var(--weight-medium);
+  margin-bottom: var(--sp-2);
+}
+
+.counter-label {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.8);
+}
+
+/* ─── [S3] About Section (Light background again) ──── */
+.about {
+    background-color: var(--bg-page); /* Back to off-white */
+}
+
+.image-stack img {
+  border-radius: var(--radius-sm);
+}
+
+/* ─── [S4] Portal Sections (Cards) ─────────────────── */
+.portals {
+    background-color: var(--bg-page);
+    border-top: 1px solid rgba(0,0,0,0.05); /* very subtle separator */
+}
+
+/* ─── [S6] Media & [S7] CTA ───────────────────────── */
+.media, .cta {
+  background-color: var(--bg-page);
+}

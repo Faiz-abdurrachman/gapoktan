@@ -1,0 +1,145 @@
+/* ─── Base UI Components (Seed Perfect Match) ────────── */
+
+/* ─── Buttons ────────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  transition: all var(--transition-base);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--seed-primary);
+  color: var(--seed-text-light);
+}
+
+.btn-primary:hover {
+  transform: scale(1.02);
+}
+
+.btn-salak {
+  background-color: var(--orange-salak);
+  color: #fff;
+}
+
+.btn-salak:hover {
+  background-color: #c96b30; /* slightly darker salak */
+  transform: scale(1.02);
+}
+
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--seed-text-dark);
+  border: 1px solid var(--seed-text-dark);
+}
+
+.btn-outline:hover {
+  background-color: var(--seed-text-dark);
+  color: var(--seed-text-light);
+}
+
+.btn-link {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--seed-text-dark);
+  border-bottom: 1px solid currentColor;
+  font-weight: var(--weight-medium);
+}
+
+.btn-link:hover {
+  opacity: 0.7;
+}
+
+.btn-link-white {
+    color: var(--seed-text-light);
+}
+
+/* ─── Tiny Outline Labels (Seed style) ───────────────── */
+
+.label-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: var(--weight-semibold);
+  border: 1px solid var(--orange-salak);    
+  letter-spacing: var(--tracking-wide);
+  color: var(--orange-salak);
+  margin-bottom: var(--sp-4);
+}
+
+.label-pill.white {
+    color: var(--seed-text-light);
+}
+
+/* ─── Cards (Seed's Product Card Style) ──────────────── */
+
+.card {
+  background-color: transparent;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: background var(--transition-base), transform var(--transition-base);
+  padding: var(--sp-6);
+  border: 1px solid rgba(0,0,0,0.05); /* very light border */
+}
+
+.card.solid {
+    background-color: var(--seed-bg-light); /* off white */
+    border: none;
+}
+
+.card.dark {
+    background-color: var(--seed-bg-dark-elevated);
+    border: none;
+    color: var(--seed-text-light);
+    box-shadow: none; /* explicitly remove shadow for authentic flat seed look */
+}
+
+.card:hover {
+  background-color: rgba(0,0,0,0.02);
+  transform: translateY(-2px);
+}
+
+.card.solid:hover {
+    background-color: #f0efe9; /* slightly darker off white */
+}
+
+.card.dark:hover {
+    background-color: rgba(255,255,255, 0.08);
+}
+
+.card-image-wrap {
+  aspect-ratio: 1 / 1; /* square for products */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--sp-6);
+}
+
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Like product shots */
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .card-image-wrap img {
+  transform: scale(1.05);
+}
+
+.card-body {
+  padding: 0;
+}

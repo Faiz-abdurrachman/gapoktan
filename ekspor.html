@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giat Ekspor — Gapoktan Ngudi Luhur</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS Stack -->
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components/navbar.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/ui.css">
+    <link rel="stylesheet" href="css/pages/ekspor.css">
+</head>
+<body class="bg-light">
+
+    <!-- [S0] HEADER / NAVBAR -->
+    <!-- Add dark-mode class because background here might be white/beige -->
+    <header class="header dark-mode" id="navbar">
+        <div class="nav-container">
+            <div class="nav-pill nav-pill-left">
+                <a href="/" class="logo">
+                    <span style="font-weight: 600;">Ngudi Luhur</span>
+                    <span style="display:inline-block; width: 6px; height: 6px; background:currentColor; border-radius:50%; margin-left:2px;"></span>
+                </a>
+                
+                <nav class="nav-list ms-8">
+                    <a href="ekspor.html" class="nav-link active">Ekspor</a>
+                    <a href="umkm.html" class="nav-link">UMKM</a>
+                    <a href="agrowisata.html" class="nav-link">Agrowisata</a>
+                </nav>
+            </div>
+
+            <div class="nav-pill nav-pill-right hidden-mobile">
+                <span class="nav-cta-text">Hubungi Manager Ekspor</span>
+                <a href="https://wa.me/6281234567891" class="nav-btn">WhatsApp</a>
+            </div>
+            
+            <button class="menu-toggle" id="hamburger" aria-label="Buka Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main style="padding-top: 120px;">
+        <section class="section">
+            <div class="container text-center max-w-xl mx-auto fade-up">
+                <span class="label-pill">QUALITY CONTROL</span>
+                <h1 class="text-5xl mb-6">Dari Lereng Merapi<br>ke Pasar Dunia.</h1>
+                <p class="text-content mb-12">Sistem manajemen hulu-ke-hilir yang terstandarisasi untuk memastikan setiap kontainer berisi salak premium terbaik.</p>
+            </div>
+        </section>
+
+        <section class="section px-4">
+            <div class="container grid grid-2 grid-4-lg gap-8">
+                <div class="card solid fade-up">
+                    <div class="card-body">
+                        <span class="text-2xl mb-4 block">📦</span>
+                        <h3 class="mb-2 text-xl">1. Collecting</h3>
+                        <p class="text-sm text-content">Pengumpulan hasil panen dari ratusan petani binaan.</p>
+                    </div>
+                </div>
+                <div class="card solid fade-up delay-100">
+                    <div class="card-body">
+                        <span class="text-2xl mb-4 block">🧼</span>
+                        <h3 class="mb-2 text-xl">2. Packing</h3>
+                        <p class="text-sm text-content">Pembersihan, pelabelan, dan pengemasan standar internasional.</p>
+                    </div>
+                </div>
+                <div class="card solid fade-up delay-200">
+                    <div class="card-body">
+                        <span class="text-2xl mb-4 block">🔬</span>
+                        <h3 class="mb-2 text-xl">3. Grading</h3>
+                        <p class="text-sm text-content">Penyortiran ketat berdasarkan ukuran, berat, dan kematangan.</p>
+                    </div>
+                </div>
+                <div class="card solid fade-up delay-300">
+                    <div class="card-body">
+                        <span class="text-2xl mb-4 block">🚢</span>
+                        <h3 class="mb-2 text-xl">4. Shipping</h3>
+                        <p class="text-sm text-content">Pengiriman via kontainer reefer ke negara tujuan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- JS Stack -->
+    <script src="js/main.js"></script>
+</body>
+</html>
