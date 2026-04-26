@@ -64,6 +64,11 @@
     color: var(--seed-text-light);
 }
 
+.btn-sm {
+    padding: 8px 16px;
+    font-size: var(--text-sm);
+}
+
 /* ─── Tiny Outline Labels (Seed style) ───────────────── */
 
 .label-pill {

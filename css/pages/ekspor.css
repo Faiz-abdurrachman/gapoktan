@@ -1,39 +1,118 @@
-/* ─── Export Page Specific Styles ─────────────────────── */
+/* ─── Ekspor Page Specific Styles ─────────────────────── */
 
-.workflow-card {
-  text-align: center;
-  padding: var(--sp-10);
-  background-color: white;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
-  border: 1px solid var(--border-light);
+/* ─── Hero ──────────────────────────────────────────── */
+.ekspor-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: var(--sp-24);
+    background: url('../../images/hero/DSC04963 (1).webp') center/cover no-repeat;
 }
 
-.workflow-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--green-primary);
+.ekspor-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(15, 40, 22, 0.82) 40%,
+        rgba(15, 40, 22, 0.35) 100%
+    );
 }
 
-.workflow-icon {
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  background-color: var(--green-light);
-  border-radius: 50%;
-  color: var(--green-primary);
+.ekspor-hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 140px;
 }
 
-.export-list {
-  list-style: none;
+/* ─── 4-Step Cards ───────────────────────────────────── */
+.step-number {
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    color: var(--orange-salak);
+    line-height: 1;
+    letter-spacing: var(--tracking-tight);
 }
 
-.export-list li {
-  font-family: var(--font-body);
-  font-size: var(--text-base);
-  color: var(--text-primary);
+/* ─── Country List ───────────────────────────────────── */
+.ekspor-country-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-6);
 }
+
+.ekspor-country {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
+}
+
+.country-code {
+    flex-shrink: 0;
+    width: 36px;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--orange-salak);
+    background: rgba(193, 90, 30, 0.1);
+    border: 1px solid rgba(193, 90, 30, 0.25);
+    border-radius: 4px;
+    padding: 3px 5px;
+}
+
+/* ─── Gallery ────────────────────────────────────────── */
+.ekspor-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-4);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .ekspor-gallery {
+        grid-template-columns: 3fr 2fr;
+        height: 520px;
+    }
+}
+
+.ekspor-gallery-main {
+    overflow: hidden;
+    border-radius: var(--radius-md);
+}
+
+.ekspor-gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.ekspor-gallery-main:hover img {
+    transform: scale(1.03);
+}
+
+.ekspor-gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-4);
+}
+
+.ekspor-gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    transition: transform var(--transition-slow);
+}
+
+.ekspor-gallery-grid img:hover {
+    transform: scale(1.03);
+}
+
+/* ─── Utility overrides ──────────────────────────────── */
+.hover-opacity { transition: opacity var(--transition-fast); }
+.hover-opacity:hover { opacity: 1 !important; }

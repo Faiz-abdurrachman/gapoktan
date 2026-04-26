@@ -48,6 +48,22 @@ const PRODUCTS = [
         price: "Rp 15.000",
         image: "images/umkm/product_6.webp",
         desc: "Buah salak segar dalam rendaman sirup yang manis dan menyegarkan."
+    },
+    {
+        id: 7,
+        name: "Selai Salak",
+        category: "makanan",
+        price: "Rp 20.000",
+        image: "images/umkm/product_7.webp",
+        desc: "Olesan manis dari salak Nglumut pilihan — sempurna untuk sarapan dan camilan keluarga."
+    },
+    {
+        id: 8,
+        name: "Kurma Salak",
+        category: "makanan",
+        price: "Rp 25.000",
+        image: "images/umkm/product_8.webp",
+        desc: "Inovasi olahan salak yang menyerupai kurma — manis, bergizi, dan satu-satunya dari dapur KWT Ngudi Luhur."
     }
 ];
 
@@ -97,7 +113,7 @@ function renderProducts(products) {
                 <h3 class="mb-2" style="font-size: 1.125rem;">${p.name}</h3>
                 <span class="product-price">${p.price}</span>
                 <p class="text-xs text-content mb-6">${p.desc}</p>
-                <a href="https://wa.me/6281234567891?text=Halo KWT Ngudi Luhur, saya ingin pesan ${p.name}" class="btn btn-green btn-sm" target="_blank">Pesan via WA</a>
+                <a href="https://wa.me/6281234567891?text=Halo KWT Ngudi Luhur, saya ingin pesan ${p.name}" class="btn btn-green btn-sm" target="_blank"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>Pesan via WhatsApp</a>
             </div>
         `;
         

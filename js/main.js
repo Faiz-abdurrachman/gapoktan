@@ -5,50 +5,60 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollAnimations();
 });
 
-/**
- * Handle Navbar scroll state and mobile menu
- */
 function initNavbar() {
     const header = document.querySelector('.header');
     if (!header) return;
 
-    // Scroll listener
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
+        header.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    const toggle = document.querySelector('.menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('menu-overlay');
+
+    if (!toggle || !mobileMenu) return;
+
+    function openMenu() {
+        mobileMenu.classList.add('open');
+        overlay?.classList.add('visible');
+        toggle.classList.add('open');
+        toggle.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.remove('open');
+        overlay?.classList.remove('visible');
+        toggle.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    }
+
+    toggle.addEventListener('click', () => {
+        mobileMenu.classList.contains('open') ? closeMenu() : openMenu();
     });
 
-    // Mobile Menu Toggle (to be implemented more fully later)
-    const toggle = document.querySelector('.menu-toggle');
-    if (toggle) {
-        toggle.addEventListener('click', () => {
-            // Toggle menu logic
-            console.log('Mobile menu toggled');
-        });
-    }
+    overlay?.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
 }
 
-/**
- * Initialize Intersection Observer for fade-in animations
- */
 function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                observer.unobserve(entry.target); // Only animate once
+                observer.unobserve(entry.target);
             }
         });
-    }, observerOptions);
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
-    const animateElements = document.querySelectorAll('.fade-up');
-    animateElements.forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 }

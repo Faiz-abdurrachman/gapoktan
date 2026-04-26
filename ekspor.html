@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giat Ekspor — Gapoktan Ngudi Luhur</title>
-    
-    <!-- Google Fonts -->
+    <title>Ekspor Salak Nglumut Premium — Gapoktan Ngudi Luhur Srumbung Magelang</title>
+    <meta name="description" content="Pemasok salak Nglumut premium berkualitas ekspor dari Srumbung, Magelang. Pengiriman 30–50 ton/minggu ke China, Eropa & Asia. Bermitra dengan Sunpride & DSA Astra.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- CSS Stack -->
     <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/global.css">
@@ -24,79 +21,308 @@
 </head>
 <body class="bg-light">
 
-    <!-- [S0] HEADER / NAVBAR -->
-    <!-- Add dark-mode class because background here might be white/beige -->
-    <header class="header dark-mode" id="navbar">
+    <!-- [E0] NAVBAR -->
+    <header class="header" id="navbar">
         <div class="nav-container">
             <div class="nav-pill nav-pill-left">
-                <a href="/" class="logo">
+                <a href="index.html" class="logo">
                     <span style="font-weight: 600;">Ngudi Luhur</span>
                     <span style="display:inline-block; width: 6px; height: 6px; background:currentColor; border-radius:50%; margin-left:2px;"></span>
                 </a>
-                
                 <nav class="nav-list ms-8">
                     <a href="ekspor.html" class="nav-link active">Ekspor</a>
                     <a href="umkm.html" class="nav-link">UMKM</a>
                     <a href="agrowisata.html" class="nav-link">Agrowisata</a>
                 </nav>
             </div>
-
             <div class="nav-pill nav-pill-right hidden-mobile">
                 <span class="nav-cta-text">Hubungi Manager Ekspor</span>
-                <a href="https://wa.me/6281234567891" class="nav-btn">WhatsApp</a>
+                <a href="https://wa.me/6281234567891" class="nav-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
             </div>
-            
-            <button class="menu-toggle" id="hamburger" aria-label="Buka Menu">
-                <span></span>
-                <span></span>
+            <button class="menu-toggle" id="hamburger" aria-label="Buka Menu" aria-expanded="false">
+                <span></span><span></span>
             </button>
         </div>
     </header>
 
-    <main style="padding-top: 120px;">
-        <section class="section">
-            <div class="container text-center max-w-xl mx-auto fade-up">
-                <span class="label-pill">QUALITY CONTROL</span>
-                <h1 class="text-5xl mb-6">Dari Lereng Merapi<br>ke Pasar Dunia.</h1>
-                <p class="text-content mb-12">Sistem manajemen hulu-ke-hilir yang terstandarisasi untuk memastikan setiap kontainer berisi salak premium terbaik.</p>
+    <!-- Mobile Menu -->
+    <div id="menu-overlay" class="menu-overlay"></div>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Navigasi mobile">
+        <a href="index.html" class="mobile-nav-link">Beranda</a>
+        <a href="ekspor.html" class="mobile-nav-link active">Giat Ekspor</a>
+        <a href="umkm.html" class="mobile-nav-link">UMKM & Olahan</a>
+        <a href="agrowisata.html" class="mobile-nav-link">Agrowisata</a>
+        <a href="https://wa.me/6281234567891" class="mobile-nav-cta" target="_blank" rel="noopener noreferrer">Hubungi Tim Ekspor</a>
+    </nav>
+
+    <main>
+        <!-- [E1] HERO -->
+        <section class="ekspor-hero">
+            <div class="ekspor-hero-overlay"></div>
+            <div class="container ekspor-hero-content fade-up">
+                <span class="label-pill" style="border-color:rgba(255,255,255,0.5); color:#fff;">GIAT EKSPOR · Poktan Ngudi Luhur</span>
+                <h1 style="color:#fff; margin-top: var(--sp-6); margin-bottom: var(--sp-6);">Dari Lereng Merapi<br>ke Pasar Dunia.</h1>
+                <p style="color:rgba(255,255,255,0.85); font-size: var(--text-lg); max-width: 520px; margin-bottom: var(--sp-10); line-height: var(--leading-normal);">Salak Nglumut premium berkualitas ekspor — dikirim 30 hingga 50 ton setiap minggu ke China, Kamboja, Eropa, dan Timor Leste. Terstandarisasi, terkontrol, terpercaya.</p>
+                <a href="https://wa.me/6281234567891" class="btn" style="background:#fff; color: var(--seed-text-dark);" target="_blank" rel="noopener noreferrer" data-wa="ekspor"><i class="fa-brands fa-whatsapp" style="margin-right:8px;"></i>Hubungi Tim Ekspor</a>
             </div>
         </section>
 
-        <section class="section px-4">
-            <div class="container grid grid-2 grid-4-lg gap-8">
-                <div class="card solid fade-up">
-                    <div class="card-body">
-                        <span class="text-2xl mb-4 block">📦</span>
-                        <h3 class="mb-2 text-xl">1. Collecting</h3>
-                        <p class="text-sm text-content">Pengumpulan hasil panen dari ratusan petani binaan.</p>
+        <!-- [E2] KEPERCAYAAN & MITRA -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="text-center fade-up mb-16">
+                    <span class="label-pill">KEPERCAYAAN & LEGALITAS</span>
+                    <h2 class="text-5xl mt-6">Dipercaya oleh Mitra<br>Kelas Nasional</h2>
+                    <p class="text-content mt-6" style="max-width:520px; margin-left:auto; margin-right:auto;">Produk kami telah melewati kurasi ketat dan diterima oleh mitra distribusi nasional terkemuka, menjadikan Gapoktan Ngudi Luhur salah satu pemasok salak premium paling dipercaya di Indonesia.</p>
+                </div>
+
+                <div class="grid grid-2 gap-8 mb-16 fade-up">
+                    <div class="card solid" style="padding: var(--sp-10); text-align:center;">
+                        <div style="width:64px; height:64px; background: var(--green-light); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto var(--sp-6);">
+                            <i class="fa-solid fa-seedling" style="font-size:1.5rem; color:var(--green-primary);"></i>
+                        </div>
+                        <h3 class="text-xl mb-4">PT Sewu Segar Nusantara</h3>
+                        <p class="text-sm text-content">Mitra distribusi nasional — <strong>Sunpride</strong>. Salah satu perusahaan agribisnis buah segar terbesar di Indonesia.</p>
+                    </div>
+                    <div class="card solid" style="padding: var(--sp-10); text-align:center;">
+                        <div style="width:64px; height:64px; background: var(--green-light); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto var(--sp-6);">
+                            <i class="fa-solid fa-award" style="font-size:1.5rem; color:var(--green-primary);"></i>
+                        </div>
+                        <h3 class="text-xl mb-4">Desa Sejahtera Astra</h3>
+                        <p class="text-sm text-content">Program pemberdayaan petani unggulan dari <strong>PT Astra International</strong>. Ngudi Luhur menjadi unit percontohan nasional.</p>
                     </div>
                 </div>
-                <div class="card solid fade-up delay-100">
-                    <div class="card-body">
-                        <span class="text-2xl mb-4 block">🧼</span>
-                        <h3 class="mb-2 text-xl">2. Packing</h3>
-                        <p class="text-sm text-content">Pembersihan, pelabelan, dan pengemasan standar internasional.</p>
+
+                <div class="fade-up">
+                    <div class="text-center mb-12">
+                        <h3 class="text-2xl">Terstandarisasi & Tersertifikasi</h3>
+                        <p class="text-sm text-content mt-4">Seluruh produk ekspor kami telah memenuhi persyaratan badan karantina pertanian dan standar internasional yang berlaku.</p>
+                    </div>
+                    <div class="grid grid-2 gap-6" style="max-width:640px; margin:0 auto;">
+                        <div class="card solid" style="display:flex; gap: var(--sp-4); align-items:center; padding: var(--sp-6);">
+                            <i class="fa-solid fa-file-shield" style="font-size:1.4rem; flex-shrink:0; color:var(--green-primary); width:28px; text-align:center;"></i>
+                            <div>
+                                <p class="font-semibold text-sm">Karantina Pertanian</p>
+                                <p class="text-xs text-content">Lolos pemeriksaan BBKP/BKIPM</p>
+                            </div>
+                        </div>
+                        <div class="card solid" style="display:flex; gap: var(--sp-4); align-items:center; padding: var(--sp-6);">
+                            <i class="fa-solid fa-leaf" style="font-size:1.4rem; flex-shrink:0; color:var(--green-primary); width:28px; text-align:center;"></i>
+                            <div>
+                                <p class="font-semibold text-sm">Sertifikasi Organik</p>
+                                <p class="text-xs text-content">300 hektar lahan tersertifikasi</p>
+                            </div>
+                        </div>
+                        <div class="card solid" style="display:flex; gap: var(--sp-4); align-items:center; padding: var(--sp-6);">
+                            <i class="fa-solid fa-boxes-stacked" style="font-size:1.4rem; flex-shrink:0; color:var(--green-primary); width:28px; text-align:center;"></i>
+                            <div>
+                                <p class="font-semibold text-sm">Standar Grading Ekspor</p>
+                                <p class="text-xs text-content">Grade A/B sesuai permintaan buyer</p>
+                            </div>
+                        </div>
+                        <div class="card solid" style="display:flex; gap: var(--sp-4); align-items:center; padding: var(--sp-6);">
+                            <i class="fa-solid fa-temperature-low" style="font-size:1.4rem; flex-shrink:0; color:var(--green-primary); width:28px; text-align:center;"></i>
+                            <div>
+                                <p class="font-semibold text-sm">Reefer Container</p>
+                                <p class="text-xs text-content">Pengiriman suhu terkontrol</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card solid fade-up delay-200">
-                    <div class="card-body">
-                        <span class="text-2xl mb-4 block">🔬</span>
-                        <h3 class="mb-2 text-xl">3. Grading</h3>
-                        <p class="text-sm text-content">Penyortiran ketat berdasarkan ukuran, berat, dan kematangan.</p>
+            </div>
+        </section>
+
+        <!-- [E3] ALUR OPERASIONAL -->
+        <section class="section bg-dark">
+            <div class="container">
+                <div class="text-center mb-16 fade-up">
+                    <span class="label-pill" style="border-color:rgba(255,255,255,0.4); color:#fff;">ALUR OPERASIONAL</span>
+                    <h2 style="color:#fff; margin-top: var(--sp-6);">Dari Pohon<br>hingga Kontainer</h2>
+                    <p style="color:rgba(255,255,255,0.7); margin-top: var(--sp-6); max-width:480px; margin-left:auto; margin-right:auto; font-size: var(--text-sm);">Setiap tahap dikendalikan dengan standar ketat untuk memastikan kualitas premium sampai ke tangan pembeli internasional.</p>
+                </div>
+
+                <div class="grid grid-2 gap-8" style="max-width:900px; margin:0 auto;">
+                    <div class="card dark fade-up" style="padding: var(--sp-10);">
+                        <div class="step-number">01</div>
+                        <h3 style="color:#fff; margin: var(--sp-4) 0 var(--sp-3);">Collecting House</h3>
+                        <p style="color:rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: var(--leading-normal);">Hasil panen dari 5 Poktan binaan dikumpulkan ke pusat distribusi Gapoktan. Pencatatan berat dan asal kebun dilakukan secara sistematis sebelum masuk proses selanjutnya.</p>
+                    </div>
+                    <div class="card dark fade-up delay-100" style="padding: var(--sp-10);">
+                        <div class="step-number">02</div>
+                        <h3 style="color:#fff; margin: var(--sp-4) 0 var(--sp-3);">Packing House</h3>
+                        <p style="color:rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: var(--leading-normal);">Buah dicuci bersih dan diseleksi berdasarkan standar berat dan tampilan fisik. Buah non-ekspor dipisahkan untuk pasar lokal atau produk olahan KWT.</p>
+                    </div>
+                    <div class="card dark fade-up delay-200" style="padding: var(--sp-10);">
+                        <div class="step-number">03</div>
+                        <h3 style="color:#fff; margin: var(--sp-4) 0 var(--sp-3);">Quality Control & Grading</h3>
+                        <p style="color:rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: var(--leading-normal);">Sortase kedua yang lebih ketat dengan penimbangan akurat. Setiap buah diperiksa ulang untuk memastikan konsistensi kualitas premium sesuai standar buyer internasional.</p>
+                    </div>
+                    <div class="card dark fade-up delay-300" style="padding: var(--sp-10);">
+                        <div class="step-number">04</div>
+                        <h3 style="color:#fff; margin: var(--sp-4) 0 var(--sp-3);">Stuffing & Shipping</h3>
+                        <p style="color:rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: var(--leading-normal);">Buah dimuat ke kontainer bersuhu terkontrol yang menjaga kesegaran selama pengiriman. Siap diberangkatkan menuju China, Eropa, Kamboja, dan pasar Asia lainnya.</p>
                     </div>
                 </div>
-                <div class="card solid fade-up delay-300">
-                    <div class="card-body">
-                        <span class="text-2xl mb-4 block">🚢</span>
-                        <h3 class="mb-2 text-xl">4. Shipping</h3>
-                        <p class="text-sm text-content">Pengiriman via kontainer reefer ke negara tujuan.</p>
+            </div>
+        </section>
+
+        <!-- [E4] JANGKAUAN EKSPOR -->
+        <section class="section bg-light">
+            <div class="container">
+                <div class="text-center mb-16 fade-up">
+                    <span class="label-pill">JANGKAUAN EKSPOR</span>
+                    <h2 class="text-5xl mt-6">Menjangkau Pasar<br>di 4 Penjuru Dunia</h2>
+                    <p class="text-content mt-6" style="max-width:480px; margin-left:auto; margin-right:auto;">Dengan pengiriman rutin 30–50 ton per minggu, produk kami telah menjangkau pasar Asia dan Eropa — dan terus berkembang.</p>
+                </div>
+
+                <div class="grid grid-2 gap-8 fade-up" style="max-width:720px; margin:0 auto;">
+                    <div class="card solid" style="padding: var(--sp-10);">
+                        <p class="uppercase tracking-widest text-xs font-bold mb-8" style="color:var(--orange-salak);">Pasar Aktif Saat Ini</p>
+                        <div class="ekspor-country-list">
+                            <div class="ekspor-country">
+                                <span class="country-code">CN</span>
+                                <div>
+                                    <p class="font-semibold">China</p>
+                                    <p class="text-xs text-content">±700 Ton (Jan–Okt 2025)</p>
+                                </div>
+                            </div>
+                            <div class="ekspor-country">
+                                <span class="country-code">KH</span>
+                                <div>
+                                    <p class="font-semibold">Kamboja</p>
+                                    <p class="text-xs text-content">Pengiriman rutin</p>
+                                </div>
+                            </div>
+                            <div class="ekspor-country">
+                                <span class="country-code">EU</span>
+                                <div>
+                                    <p class="font-semibold">Eropa</p>
+                                    <p class="text-xs text-content">Standar premium</p>
+                                </div>
+                            </div>
+                            <div class="ekspor-country">
+                                <span class="country-code">TL</span>
+                                <div>
+                                    <p class="font-semibold">Timor Leste</p>
+                                    <p class="text-xs text-content">Pasar berkembang</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="card solid" style="padding: var(--sp-10);">
+                        <p class="uppercase tracking-widest text-xs font-bold mb-8" style="color:var(--green-primary);">Target Pasar Baru</p>
+                        <div class="ekspor-country-list">
+                            <div class="ekspor-country">
+                                <span class="country-code">VN</span>
+                                <div>
+                                    <p class="font-semibold">Vietnam</p>
+                                    <p class="text-xs text-content">Ekspansi 2025–2026</p>
+                                </div>
+                            </div>
+                            <div class="ekspor-country">
+                                <span class="country-code">SA</span>
+                                <div>
+                                    <p class="font-semibold">Arab Saudi</p>
+                                    <p class="text-xs text-content">Pasar Timur Tengah</p>
+                                </div>
+                            </div>
+                            <div class="ekspor-country">
+                                <span class="country-code">US</span>
+                                <div>
+                                    <p class="font-semibold">USA</p>
+                                    <p class="text-xs text-content">Pasar premium diaspora</p>
+                                </div>
+                            </div>
+                            <div class="ekspor-country">
+                                <span class="country-code">JP</span>
+                                <div>
+                                    <p class="font-semibold">Jepang</p>
+                                    <p class="text-xs text-content">Standar kualitas tinggi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Volume highlight -->
+                <div class="text-center mt-16 fade-up">
+                    <div style="display:inline-block; background:var(--seed-bg-dark); padding: var(--sp-6) var(--sp-12); border-radius: var(--radius-lg);">
+                        <p class="text-xs uppercase tracking-widest mb-2" style="color:rgba(255,255,255,0.6);">Volume ekspor</p>
+                        <p style="color:var(--orange-salak); font-size: var(--text-5xl); font-weight:700; line-height:1;">±700 Ton</p>
+                        <p class="text-sm mt-2" style="color:rgba(255,255,255,0.7);">diekspor ke China saja · Januari–Oktober 2025</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [E5] GALERI EKSPOR -->
+        <section class="section bg-light" style="padding-top:0;">
+            <div class="container">
+                <div class="text-center mb-16 fade-up">
+                    <span class="label-pill">DOKUMENTASI</span>
+                    <h2 class="text-5xl mt-6">High Quality Control,<br>Setiap Tahap</h2>
+                </div>
+
+                <div class="ekspor-gallery fade-up">
+                    <div class="ekspor-gallery-main">
+                        <img src="images/hero/DSC04978.webp" alt="Proses packing house salak ekspor Gapoktan Ngudi Luhur Srumbung Magelang" loading="lazy">
+                    </div>
+                    <div class="ekspor-gallery-grid">
+                        <img src="images/hero/DSC04975.webp" alt="Tim Poktan Ngudi Luhur di lahan salak Nglumut" loading="lazy">
+                        <img src="images/hero/DSC04986.webp" alt="Quality control salak Nglumut sebelum ekspor" loading="lazy">
+                        <img src="images/hero/DSC05001.webp" alt="Kebun salak Nglumut Srumbung berlatar Gunung Merapi" loading="lazy">
+                        <img src="images/hero/DSC04983.webp" alt="Proses grading salak premium Gapoktan Ngudi Luhur" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [E6] CTA -->
+        <section class="section bg-dark text-center">
+            <div class="container fade-up" style="max-width:640px; margin:0 auto;">
+                <span class="label-pill" style="border-color:rgba(255,255,255,0.4); color:#fff;">KERJASAMA</span>
+                <h2 style="color:#fff; margin: var(--sp-6) 0;">Tertarik Bermitra<br>bersama Kami?</h2>
+                <p style="color:rgba(255,255,255,0.75); margin-bottom: var(--sp-10); font-size: var(--text-sm); line-height: var(--leading-normal);">Kami terbuka untuk kerjasama dengan eksportir, distributor, buyer internasional, dan investor yang ingin mengembangkan rantai pasok salak premium bersama komunitas petani Srumbung, Magelang.</p>
+                <div class="flex justify-center gap-4 flex-wrap">
+                    <a href="https://wa.me/6281234567891" class="btn" style="background:#fff; color: var(--seed-text-dark);" target="_blank" rel="noopener noreferrer" data-wa="ekspor"><i class="fa-brands fa-whatsapp" style="margin-right:8px;"></i>Hubungi Tim Ekspor via WhatsApp</a>
                 </div>
             </div>
         </section>
     </main>
-    
-    <!-- JS Stack -->
+
+    <!-- FOOTER -->
+    <footer class="footer bg-dark" style="padding: var(--sp-16) 0 var(--sp-12); border-top: 1px solid rgba(255,255,255,0.05);">
+        <div class="container grid grid-3 gap-16">
+            <div>
+                <a href="index.html" class="logo text-white text-2xl font-bold mb-4 flex items-center gap-4">
+                    Ngudi Luhur <span style="display:inline-block; width: 6px; height: 6px; background:var(--orange-salak); border-radius:50%; margin-top:4px;"></span>
+                </a>
+                <p class="text-sm text-white opacity-60 mb-2">Pusat Agribisnis Salak Nglumut Premium</p>
+                <p class="text-sm text-white opacity-60">Srumbung, Kabupaten Magelang, Jawa Tengah</p>
+            </div>
+            <div>
+                <h4 class="text-white text-xs mb-6 uppercase tracking-widest font-bold">Navigasi</h4>
+                <ul class="flex flex-column gap-3 text-sm text-white opacity-60">
+                    <li><a href="index.html" class="hover-opacity">Beranda</a></li>
+                    <li><a href="ekspor.html" class="hover-opacity">Giat Ekspor</a></li>
+                    <li><a href="umkm.html" class="hover-opacity">UMKM & Olahan</a></li>
+                    <li><a href="agrowisata.html" class="hover-opacity">Agrowisata</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white text-xs mb-6 uppercase tracking-widest font-bold">Kontak & Lokasi</h4>
+                <p class="text-sm text-white opacity-60 mb-4"><i class="fa-solid fa-location-dot" style="margin-right:6px;"></i>99V8+5QH, Jrakah, Kaliurang, Kec. Srumbung, Magelang 56483</p>
+                <a href="https://maps.app.goo.gl/XdoRZrutTGQzJPHN9" class="text-sm text-white opacity-60 block mb-2" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-location-dot" style="margin-right:6px;"></i>Buka di Google Maps</a>
+                <a href="https://wa.me/6281234567891" class="text-sm text-white opacity-60 block" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>WhatsApp Tim Ekspor</a>
+            </div>
+        </div>
+        <div class="container" style="margin-top: var(--sp-12); padding-top: var(--sp-8); border-top: 1px solid rgba(255,255,255,0.07);">
+            <p class="text-xs text-white opacity-40">© <span id="year"></span> Gapoktan Ngudi Luhur · Srumbung, Magelang</p>
+        </div>
+    </footer>
+
     <script src="js/main.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

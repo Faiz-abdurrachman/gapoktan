@@ -1,9 +1,5 @@
-'/  * ─── Homepage Specific Styles (Seed Perfect Match) ──── */
+/* ─── Homepage Specific Styles (Seed Perfect Match) ──── */
 
-/* ─── [S0] Navbar Specific Override ─────────────────── */
-.header .logo { color: var(--seed-text-dark); }
-.header .nav-link { color: var(--seed-text-dark); }
-.header .menu-toggle span { background: var(--seed-text-dark); }
 
 /* ─── [S1] Hero Section ─────────────────────────────── */
 
@@ -12,30 +8,43 @@
   background-color: var(--seed-bg-light);
   border-bottom-left-radius: var(--radius-lg);
   border-bottom-right-radius: var(--radius-lg);
-  /* Generous padding for the floating navbar and Seed aesthetic */
-  padding-top: calc(var(--sp-32) + 80px); 
+  padding-top: calc(var(--sp-24) + 70px);
   padding-bottom: var(--sp-24);
-  z-index: 2; /* Sits above the dark section below it */
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../../assets/images/section1.png');
+  background-size: cover;
+  background-position: right center;
+  z-index: -2;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--seed-bg-light) 35%, rgba(246, 245, 241, 0.9) 50%, rgba(246, 245, 241, 0) 75%);
+  z-index: -1;
+}
+
+.hero-layout,
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 .hero-layout {
-  display: flex;
-  flex-direction: column-reverse; /* Image top, text bottom on mobile */
-  gap: var(--sp-12);
-}
-
-@media (min-width: 1024px) {
-  .hero-layout {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
+  display: block;
 }
 
 .hero-content {
-  flex: 1;
-  max-width: 550px;
+  max-width: 650px;
 }
 
 .hero-title {
@@ -58,40 +67,25 @@
 }
 
 .hero-image-wrap {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  position: relative;
+  display: none !important;
 }
 
-.hero-image-wrap img {
-  max-width: 100%;
-  max-height: 600px;
-  object-fit: cover;
-  border-radius: 120px 40px 120px 40px; /* highly stylized organic pill shape */
-  /* Removed cheap paddings and shadows to stay flat and smooth */
-}
-
-/* ─── [S2] Impact Section (The Dark Sub-layer) ──────── */
-
-/* Notice how Seed has a dark green section sitting 'behind' the hero's curves */
+/* ─── [S2] Impact Section ────────────────────────────── */
 .impact {
   background-color: var(--seed-bg-dark);
-  padding-top: var(--sp-32); /* plenty of padding to tuck under the hero */
+  padding-top: var(--sp-32);
   padding-bottom: var(--sp-24);
-  margin-top: -60px; /* pull it up so it slides under the hero's radius */
+  margin-top: -60px;
   z-index: 1;
   position: relative;
 }
 
 .impact-header h2 {
-    color: var(--seed-text-light);
+  color: var(--seed-text-light);
 }
 
 .counter-item {
   color: var(--seed-text-light);
-  /* No visible border or background on Seed's dark section, just clean text */
   margin-bottom: var(--sp-6);
 }
 
@@ -104,25 +98,73 @@
 
 .counter-label {
   font-size: var(--text-sm);
-  color: rgba(255,255,255,0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
-/* ─── [S3] About Section (Light background again) ──── */
+/* ─── [S3] About Section ────────────────────────────── */
 .about {
-    background-color: var(--bg-page); /* Back to off-white */
+  background-color: var(--bg-page);
 }
 
 .image-stack img {
   border-radius: var(--radius-sm);
 }
 
-/* ─── [S4] Portal Sections (Cards) ─────────────────── */
+/* ─── [S4] Portal Sections ──────────────────────────── */
 .portals {
-    background-color: var(--bg-page);
-    border-top: 1px solid rgba(0,0,0,0.05); /* very subtle separator */
+  background-color: var(--bg-page);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-/* ─── [S6] Media & [S7] CTA ───────────────────────── */
-.media, .cta {
+/* ─── [S5.5] Living the Movement ─────────────────────── */
+.movement-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3);
+}
+
+@media (min-width: 768px) {
+    .movement-grid {
+        grid-template-columns: 5fr 3fr 3fr;
+        grid-template-rows: 260px 260px;
+    }
+    .movement-large {
+        grid-row: span 2;
+    }
+}
+
+.movement-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    min-height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+@media (min-width: 768px) {
+    .movement-item { min-height: unset; }
+}
+
+.movement-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.62) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+.movement-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--sp-5) var(--sp-6);
+    color: #fff;
+    z-index: 2;
+}
+
+/* ─── [S6] Media ────────────────────────────────────── */
+.media {
   background-color: var(--bg-page);
 }

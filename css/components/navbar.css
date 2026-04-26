@@ -1,151 +1,284 @@
-/* ─── Navbar (Seed Perfect Match) ────────────────────── */
+/* ─── Navbar ─────────────────────────────────────────── */
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: var(--sp-6) var(--section-px);
-  pointer-events: none; /* Let clicks pass through the empty space */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: var(--sp-6) var(--section-px);
+    pointer-events: none;
 }
 
 .nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: none;
-  padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
 }
 
-/* Floating Pill Shape */
+/* ─── Floating Pill ──────────────────────────────────── */
+/* Dark tinted glass — readable on ANY background color  */
 .nav-pill {
-  pointer-events: auto;
-  background: rgba(180, 180, 180, 0.4);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: var(--radius-pill);
-  display: flex;
-  align-items: center;
-  height: 48px;
-  padding: 0 var(--sp-6);
+    pointer-events: auto;
+    background: rgba(15, 15, 15, 0.32);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: var(--radius-pill);
+    display: flex;
+    align-items: center;
+    height: 48px;
+    padding: 0 var(--sp-6);
+    transition: background 0.3s ease;
 }
 
-.nav-pill-left {
-  gap: var(--sp-8);
-}
+.nav-pill-left { gap: var(--sp-8); }
+.nav-pill-right { gap: var(--sp-4); }
 
-.nav-pill-right {
-  gap: var(--sp-4);
-}
-
-/* Logo */
+/* ─── Logo ───────────────────────────────────────────── */
 .logo {
-  font-family: var(--font-sans);
-  font-size: var(--text-lg);
-  font-weight: var(--weight-semibold);
-  color: var(--seed-text-light); /* White text in the pill */
-  display: flex;
-  align-items: center;
-  gap: var(--sp-2);
+    font-family: var(--font-sans);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-semibold);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    transition: opacity 0.2s ease;
 }
 
-/* Navigation Links */
+.logo:hover { opacity: 0.8; }
+
+/* ─── Nav Links ──────────────────────────────────────── */
 .nav-list {
-  display: none; /* Hidden on mobile */
-  gap: var(--sp-8);
+    display: none;
+    gap: var(--sp-8);
 }
 
 @media (min-width: 1024px) {
-  .nav-list {
-    display: flex;
-  }
+    .nav-list { display: flex; }
 }
 
 .nav-link {
-  font-family: var(--font-sans);
-  font-size: var(--text-sm);
-  font-weight: var(--weight-medium);
-  color: var(--seed-text-light);
-  transition: opacity var(--transition-fast);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: rgba(255, 255, 255, 0.82);
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.2s ease;
+}
+
+/* Underline slide-in on hover */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: width 0.25s ease;
 }
 
 .nav-link:hover {
-  opacity: 0.7;
+    color: #fff;
 }
 
-/* Active State (Seed style might bold it or use a dot, let's keep it clean) */
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
 .nav-link.active {
-  font-weight: var(--weight-bold);
+    color: #fff;
+    font-weight: var(--weight-semibold);
 }
 
-/* CTA Button in Navbar */
+/* ─── CTA Button in Pill ─────────────────────────────── */
 .nav-cta-text {
-  font-family: var(--font-sans);
-  font-size: var(--text-sm);
-  font-weight: var(--weight-medium);
-  color: var(--seed-text-light);
-  margin-right: var(--sp-4);
+    font-family: var(--font-sans);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    color: rgba(255, 255, 255, 0.82);
 }
 
 .nav-btn {
-  background: var(--bg-white);
-  color: var(--seed-text-dark);
-  padding: 8px 16px;
-  border-radius: var(--radius-pill);
-  font-size: var(--text-sm);
-  font-weight: var(--weight-medium);
-  transition: transform var(--transition-fast), background var(--transition-fast);
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 7px 16px;
+    border-radius: var(--radius-pill);
+    font-size: var(--text-sm);
+    font-weight: var(--weight-medium);
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
 }
 
 .nav-btn:hover {
-  transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.28);
+    border-color: rgba(255, 255, 255, 0.6);
+    transform: scale(1.02);
 }
 
-/* Mobile Menu Toggle */
+/* ─── Hamburger (Mobile) ─────────────────────────────── */
 .menu-toggle {
-  pointer-events: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  z-index: 1001;
-  background: rgba(180, 180, 180, 0.4);
-  backdrop-filter: blur(12px);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  align-items: center;
-  justify-content: center;
+    pointer-events: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001;
+    background: rgba(15, 15, 15, 0.32);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
 }
 
 .menu-toggle span {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: var(--seed-text-light);
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.2s ease, background 0.3s ease;
+    transform-origin: center;
 }
 
 @media (min-width: 1024px) {
-  .menu-toggle {
-    display: none;
-  }
+    .menu-toggle { display: none; }
 }
 
-/* Dark Mode Override for Subpages where background might be light */
-.header.dark-mode .nav-pill,
-.header.dark-mode .menu-toggle {
-    background: rgba(0, 0, 0, 0.05); /* very light shadow/glass */
+/* ─── Hamburger → X ──────────────────────────────────── */
+.menu-toggle.open span:first-child {
+    transform: translateY(7px) rotate(45deg);
 }
-.header.dark-mode .logo,
-.header.dark-mode .nav-link,
-.header.dark-mode .nav-cta-text {
+.menu-toggle.open span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ─── Scrolled State — solid pill when over light sections */
+.header.scrolled .nav-pill {
+    background: rgba(246, 245, 241, 0.96);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.header.scrolled .logo,
+.header.scrolled .nav-link,
+.header.scrolled .nav-cta-text {
     color: var(--seed-text-dark);
 }
-.header.dark-mode .menu-toggle span {
+
+.header.scrolled .nav-link {
+    color: rgba(21, 57, 33, 0.7);
+}
+
+.header.scrolled .nav-link:hover,
+.header.scrolled .nav-link.active {
+    color: var(--seed-text-dark);
+}
+
+.header.scrolled .nav-btn {
+    background: var(--seed-text-dark);
+    color: #fff;
+    border-color: transparent;
+}
+
+.header.scrolled .nav-btn:hover {
+    background: var(--green-dark);
+}
+
+.header.scrolled .menu-toggle {
+    background: rgba(246, 245, 241, 0.96);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.header.scrolled .menu-toggle span {
     background: var(--seed-text-dark);
 }
-.header.dark-mode .nav-btn {
+
+/* ─── Mobile Menu Overlay ────────────────────────────── */
+.menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 998;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.menu-overlay.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* ─── Mobile Slide-out Menu ──────────────────────────── */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100dvh;
+    background: var(--seed-bg-light);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 100px var(--sp-8) var(--sp-8);
+    gap: var(--sp-2);
+    transform: translateX(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-nav-link {
+    font-size: var(--text-lg);
+    font-weight: var(--weight-medium);
+    color: var(--seed-text-dark);
+    padding: var(--sp-3) 0;
+    border-bottom: 1px solid var(--border-light);
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    letter-spacing: var(--tracking-tight);
+}
+
+.mobile-nav-link:hover {
+    color: var(--green-primary);
+    padding-left: var(--sp-2);
+}
+
+.mobile-nav-link.active {
+    color: var(--green-primary);
+    font-weight: var(--weight-semibold);
+}
+
+.mobile-nav-cta {
+    margin-top: auto;
     background: var(--seed-text-dark);
-    color: var(--seed-text-light);
+    color: #fff;
+    padding: var(--sp-4) var(--sp-6);
+    border-radius: var(--radius-pill);
+    font-size: var(--text-base);
+    font-weight: var(--weight-medium);
+    text-align: center;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.mobile-nav-cta:hover {
+    opacity: 0.85;
+    transform: scale(1.01);
+}
+
+@media (min-width: 1024px) {
+    .mobile-menu,
+    .menu-overlay {
+        display: none !important;
+    }
 }

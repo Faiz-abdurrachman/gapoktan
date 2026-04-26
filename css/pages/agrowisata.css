@@ -1,39 +1,161 @@
-/* ─── Agrowisata Page Specific Styles ────────────────── */
+/* ─── Agrowisata Page Specific Styles ─────────────────── */
 
-.subpage-hero {
-  height: 60vh;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+/* ─── Hero ──────────────────────────────────────────── */
+.agro-hero {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: var(--sp-24);
+    background: url('../../images/hero/DSC04999.webp') center/cover no-repeat;
 }
 
+.agro-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(15, 50, 30, 0.88) 40%,
+        rgba(15, 50, 30, 0.40) 100%
+    );
+}
+
+.agro-hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 140px;
+}
+
+/* ─── Feature List (inside package cards) ────────────── */
+.agro-feature-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-3);
+    margin: 0;
+    padding: 0;
+}
+
+.agro-feature-list li {
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.72);
+    padding-left: var(--sp-5);
+    position: relative;
+}
+
+.agro-feature-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--orange-salak);
+    font-weight: 700;
+}
+
+/* ─── Gallery Grid ───────────────────────────────────── */
+.agro-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-4);
+}
+
+@media (min-width: 768px) {
+    .agro-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 260px 260px;
+        height: 540px;
+    }
+
+    .agro-gallery-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+}
+
+.agro-gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background: var(--border-medium);
+}
+
+.agro-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+.agro-gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ─── Gallery Caption Overlay ────────────────────────── */
+.agro-gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: var(--sp-6) var(--sp-5) var(--sp-4);
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.72) 0%,
+        transparent 100%
+    );
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform var(--transition-base);
+}
+
+.agro-gallery-item:hover .agro-gallery-caption {
+    transform: translateY(0);
+}
+
+/* ─── Booking Layout ─────────────────────────────────── */
+.agro-booking-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--sp-12);
+    align-items: start;
+}
+
+@media (min-width: 768px) {
+    .agro-booking-wrap {
+        grid-template-columns: 1fr 1.5fr;
+        gap: var(--sp-16);
+    }
+}
+
+/* ─── Form Inputs ────────────────────────────────────── */
 .form-input {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-light);
-  font-family: var(--font-body);
-  font-size: var(--text-sm);
-  transition: border-color var(--transition-fast);
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-light);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    background: #fff;
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .form-input:focus {
-  outline: none;
-  border-color: var(--green-primary);
+    outline: none;
+    border-color: var(--green-primary);
+    box-shadow: 0 0 0 3px rgba(21, 57, 33, 0.1);
 }
 
 select.form-input {
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 12px center;
-  background-size: 16px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    background-color: #fff;
+    cursor: pointer;
 }
 
-.map-wrap {
-  position: relative;
-  width: 100%;
-  height: 450px;
+textarea.form-input {
+    resize: vertical;
+    min-height: 80px;
 }
