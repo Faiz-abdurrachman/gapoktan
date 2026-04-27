@@ -40,7 +40,7 @@
 .nav-pill-left { gap: var(--sp-8); }
 .nav-pill-right {
     gap: var(--sp-4);
-    padding: 5px 5px 5px 16px;
+    padding: 5px;
 }
 
 /* ─── Logo ───────────────────────────────────────────── */
@@ -116,6 +116,7 @@
     font-size: var(--text-sm);
     font-weight: var(--weight-medium);
     color: rgba(255, 255, 255, 0.82);
+    padding-left: 10px;
 }
 
 .nav-btn {

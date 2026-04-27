@@ -82,8 +82,14 @@ function initScrollAnimations() {
 
 /* ─── Client-side Router ────────────────────────────────── */
 
+const _loadedStyles = new Set(
+    [...document.querySelectorAll('link[rel="stylesheet"]')]
+        .map(l => new URL(l.href, location.href).pathname)
+);
+
 const _loadedScripts = new Set(
-    [...document.querySelectorAll('script[src]')].map(s => new URL(s.src, location.href).pathname)
+    [...document.querySelectorAll('script[src]')]
+        .map(s => new URL(s.src, location.href).pathname)
 );
 
 function initRouter() {
@@ -114,6 +120,17 @@ function initRouter() {
     window.addEventListener('popstate', () => navigateTo(location.href, false));
 }
 
+function _loadStyle(href) {
+    return new Promise(resolve => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = href;
+        link.onload = resolve;
+        link.onerror = resolve; // don't block on CSS errors
+        document.head.appendChild(link);
+    });
+}
+
 function _loadScript(src) {
     return new Promise((resolve, reject) => {
         const s = document.createElement('script');
@@ -131,6 +148,17 @@ async function navigateTo(href, push = true) {
         const html = await res.text();
         const doc = new DOMParser().parseFromString(html, 'text/html');
 
+        // Load CSS BEFORE swap to prevent flash of unstyled content
+        const stylePending = [];
+        doc.querySelectorAll('head link[rel="stylesheet"]').forEach(l => {
+            const path = new URL(l.href, location.href).pathname;
+            if (!_loadedStyles.has(path)) {
+                _loadedStyles.add(path);
+                stylePending.push(_loadStyle(l.href));
+            }
+        });
+        await Promise.all(stylePending);
+
         const swap = async () => {
             document.title = doc.title;
 
@@ -145,16 +173,16 @@ async function navigateTo(href, push = true) {
             if (push) history.pushState(null, '', href);
             window.scrollTo({ top: 0, behavior: 'instant' });
 
-            // Load any page-specific scripts not yet loaded
-            const pending = [];
+            // Load page-specific scripts after DOM is ready
+            const scriptPending = [];
             doc.querySelectorAll('body script[src]').forEach(s => {
                 const path = new URL(s.src, location.href).pathname;
                 if (!_loadedScripts.has(path)) {
                     _loadedScripts.add(path);
-                    pending.push(_loadScript(s.src));
+                    scriptPending.push(_loadScript(s.src));
                 }
             });
-            await Promise.all(pending);
+            await Promise.all(scriptPending);
 
             _runPageInit();
         };
