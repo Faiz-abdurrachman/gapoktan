@@ -1,5 +1,8 @@
 /* ─── Product Catalog Logic ──────────────────────────── */
 
+// ⚠️ TODO-KLIEN: Semua HARGA di bawah (Rp 25.000, Rp 20.000, dst.) adalah PLACEHOLDER — minta klien kirim harga jual resmi tiap produk KWT
+// ⚠️ TODO-KLIEN: Semua FOTO produk (product_1.webp s/d product_8.webp) menggunakan foto placeholder — minta klien kirim foto produk asli tiap item
+// ⚠️ TODO-KLIEN: Ganti nomor WhatsApp "6281234567892" di fungsi renderProducts() dengan nomor WA asli KWT Ngudi Luhur
 const PRODUCTS = [
     {
         id: 1,
@@ -113,7 +116,7 @@ function renderProducts(products) {
                 <h3 class="mb-2" style="font-size: 1.125rem;">${p.name}</h3>
                 <span class="product-price">${p.price}</span>
                 <p class="text-xs text-content mb-6">${p.desc}</p>
-                <a href="https://wa.me/6281234567891?text=Halo KWT Ngudi Luhur, saya ingin pesan ${p.name}" class="btn btn-green btn-sm" target="_blank"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>Pesan via WhatsApp</a>
+                <a href="https://wa.me/6281234567892?text=Halo KWT Ngudi Luhur, saya ingin pesan ${p.name}" class="btn btn-green btn-sm" target="_blank"><span class="icon icon-whatsapp" style="margin-right:6px;"></span>Pesan via WhatsApp</a>
             </div>
         `;
         

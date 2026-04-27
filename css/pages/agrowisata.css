@@ -121,41 +121,190 @@
 
 @media (min-width: 768px) {
     .agro-booking-wrap {
-        grid-template-columns: 1fr 1.5fr;
+        grid-template-columns: 1fr 1.6fr;
         gap: var(--sp-16);
     }
 }
 
-/* ─── Form Inputs ────────────────────────────────────── */
-.form-input {
+/* ─── Booking Left Panel ─────────────────────────────── */
+.booking-divider {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
+    margin: var(--sp-8) 0 var(--sp-6);
+}
+.booking-divider::before,
+.booking-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.1);
+}
+.booking-divider span {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.35);
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.booking-wa-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-4);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: var(--sp-4) var(--sp-6);
+    color: #fff;
+    text-decoration: none;
+    transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+.booking-wa-btn:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.2);
+}
+.booking-wa-btn .icon {
+    flex-shrink: 0;
+    color: #4ADE80;
+}
+.booking-wa-label {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+.booking-wa-hint {
+    display: block;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.45);
+    margin-top: 2px;
+}
+
+/* ─── Booking Form Card ──────────────────────────────── */
+.booking-form-card {
+    background: var(--seed-bg-light);
+    border-radius: 20px;
+    padding: var(--sp-10);
+    box-shadow: 0 32px 80px rgba(0,0,0,0.35);
+}
+
+/* ─── Field System ───────────────────────────────────── */
+.field-wrap {
+    margin-bottom: var(--sp-6);
+}
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-4);
+    margin-bottom: var(--sp-6);
+}
+
+.field-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: rgba(21,57,33,0.55);
+    margin-bottom: 7px;
+    transition: color var(--transition-fast);
+}
+.field-optional {
+    font-weight: 400;
+    color: rgba(21,57,33,0.35);
+}
+.field-wrap:focus-within .field-label {
+    color: var(--green-primary);
+}
+
+.field-input {
     width: 100%;
-    padding: 12px 16px;
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--border-light);
+    padding: 13px 16px;
+    background: rgba(21,57,33,0.04);
+    border: 1.5px solid rgba(21,57,33,0.1);
+    border-radius: 11px;
     font-family: var(--font-body);
     font-size: var(--text-sm);
     color: var(--text-primary);
-    background: #fff;
-    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.form-input:focus {
-    outline: none;
-    border-color: var(--green-primary);
-    box-shadow: 0 0 0 3px rgba(21, 57, 33, 0.1);
-}
-
-select.form-input {
+    transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+    -webkit-appearance: none;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-size: 16px;
-    background-color: #fff;
+}
+.field-input::placeholder {
+    color: rgba(21,57,33,0.25);
+}
+.field-input:focus {
+    outline: none;
+    background: #fff;
+    border-color: var(--green-primary);
+    box-shadow: 0 0 0 3px rgba(21,57,33,0.08);
+}
+
+/* Select */
+.field-select-wrap {
+    position: relative;
+}
+.field-select {
+    padding-right: 42px;
     cursor: pointer;
 }
+.field-chevron {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(21,57,33,0.4);
+    pointer-events: none;
+    display: flex;
+}
 
-textarea.form-input {
-    resize: vertical;
-    min-height: 80px;
+/* Phone field */
+.field-phone-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.field-phone-prefix {
+    position: absolute;
+    left: 16px;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: rgba(21,57,33,0.5);
+    pointer-events: none;
+    z-index: 1;
+}
+.field-phone-input {
+    padding-left: 46px;
+}
+
+/* Textarea */
+textarea.field-input {
+    resize: none;
+    min-height: 88px;
+    line-height: var(--leading-normal);
+}
+
+/* Submit button */
+.btn-book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-3);
+    width: 100%;
+    padding: 15px var(--sp-8);
+    margin-top: var(--sp-4);
+    background: var(--green-primary);
+    color: #fff;
+    border: none;
+    border-radius: 11px;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: background var(--transition-fast), transform var(--transition-fast);
+}
+.btn-book:hover {
+    background: #1e4a2c;
+}
+.btn-book:active {
+    transform: scale(0.99);
 }

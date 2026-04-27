@@ -1,0 +1,35 @@
+/* ─── Icon System (Tabler Icons via mask-image) ─────── */
+/* Menggunakan CSS mask agar icon mewarisi warna parent  */
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-color: currentColor;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    vertical-align: -0.15em;
+    flex-shrink: 0;
+}
+
+.icon-whatsapp       { -webkit-mask-image: url('../../images/icons/whatsapp.svg');    mask-image: url('../../images/icons/whatsapp.svg'); }
+.icon-plant          { -webkit-mask-image: url('../../images/icons/plant.svg');        mask-image: url('../../images/icons/plant.svg'); }
+.icon-award          { -webkit-mask-image: url('../../images/icons/award.svg');        mask-image: url('../../images/icons/award.svg'); }
+.icon-shield-check   { -webkit-mask-image: url('../../images/icons/shield-check.svg'); mask-image: url('../../images/icons/shield-check.svg'); }
+.icon-leaf           { -webkit-mask-image: url('../../images/icons/leaf.svg');         mask-image: url('../../images/icons/leaf.svg'); }
+.icon-packages       { -webkit-mask-image: url('../../images/icons/packages.svg');     mask-image: url('../../images/icons/packages.svg'); }
+.icon-temperature    { -webkit-mask-image: url('../../images/icons/temperature.svg');  mask-image: url('../../images/icons/temperature.svg'); }
+.icon-tree           { -webkit-mask-image: url('../../images/icons/tree.svg');         mask-image: url('../../images/icons/tree.svg'); }
+.icon-calendar       { -webkit-mask-image: url('../../images/icons/calendar.svg');     mask-image: url('../../images/icons/calendar.svg'); }
+.icon-calendar-check { -webkit-mask-image: url('../../images/icons/calendar-check.svg'); mask-image: url('../../images/icons/calendar-check.svg'); }
+.icon-wheat          { -webkit-mask-image: url('../../images/icons/wheat.svg');        mask-image: url('../../images/icons/wheat.svg'); }
+.icon-apple          { -webkit-mask-image: url('../../images/icons/apple.svg');        mask-image: url('../../images/icons/apple.svg'); }
+.icon-building       { -webkit-mask-image: url('../../images/icons/building.svg');     mask-image: url('../../images/icons/building.svg'); }
+.icon-shopping-bag   { -webkit-mask-image: url('../../images/icons/shopping-bag.svg'); mask-image: url('../../images/icons/shopping-bag.svg'); }
+.icon-coffee         { -webkit-mask-image: url('../../images/icons/coffee.svg');       mask-image: url('../../images/icons/coffee.svg'); }
+.icon-map-pin        { -webkit-mask-image: url('../../images/icons/map-pin.svg');      mask-image: url('../../images/icons/map-pin.svg'); }
+.icon-map            { -webkit-mask-image: url('../../images/icons/map.svg');          mask-image: url('../../images/icons/map.svg'); }

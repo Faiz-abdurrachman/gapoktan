@@ -48,19 +48,12 @@
     gap: var(--sp-4);
 }
 
-.country-code {
+.country-flag {
     flex-shrink: 0;
-    width: 36px;
-    text-align: center;
-    font-family: 'Courier New', monospace;
-    font-size: 0.625rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    color: var(--orange-salak);
-    background: rgba(193, 90, 30, 0.1);
-    border: 1px solid rgba(193, 90, 30, 0.25);
-    border-radius: 4px;
-    padding: 3px 5px;
+    width: 40px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 6px;
 }
 
 /* ─── Gallery ────────────────────────────────────────── */

@@ -9,14 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/components/navbar.css">
     <link rel="stylesheet" href="css/components/footer.css">
     <link rel="stylesheet" href="css/components/ui.css">
+    <link rel="stylesheet" href="css/components/icons.css">
     <link rel="stylesheet" href="css/pages/agrowisata.css">
 </head>
 <body class="bg-light">
@@ -64,8 +63,8 @@
                 <h1 style="color:#fff; margin-top: var(--sp-6); margin-bottom: var(--sp-6);">Warisan Merapi,<br>Destinasi Edukasi<br>Agribisnis Berkelanjutan.</h1>
                 <p style="color:rgba(255,255,255,0.85); font-size: var(--text-lg); max-width:520px; margin-bottom: var(--sp-10); line-height: var(--leading-normal);">Menyajikan pengalaman wisata yang memadukan keindahan alam lereng Merapi dengan edukasi sistem pertanian modern yang ramah lingkungan. Untuk pelajar, keluarga, komunitas, hingga instansi.</p>
                 <div class="flex gap-4 flex-wrap">
-                    <a href="#paket" class="btn btn-outline" style="border-color:#fff; color:#fff;"><i class="fa-solid fa-tree" style="margin-right:8px;"></i>Lihat Paket Wisata</a>
-                    <a href="#booking" class="btn" style="background:#fff; color: var(--seed-text-dark);"><i class="fa-solid fa-calendar-days" style="margin-right:8px;"></i>Booking Kunjungan</a>
+                    <a href="#paket" class="btn btn-outline" style="border-color:#fff; color:#fff;"><span class="icon icon-tree" style="margin-right:8px;"></span>Lihat Paket Wisata</a>
+                    <a href="#booking" class="btn" style="background:#fff; color: var(--seed-text-dark);"><span class="icon icon-calendar" style="margin-right:8px;"></span>Booking Kunjungan</a>
                 </div>
             </div>
         </section>
@@ -99,7 +98,7 @@
                 <div class="grid grid-3 gap-8">
                     <!-- Paket 1 -->
                     <div class="card dark fade-up" style="padding: var(--sp-10);">
-                        <i class="fa-solid fa-wheat-awn" style="font-size:1.75rem; display:block; margin-bottom: var(--sp-6); color:rgba(255,255,255,0.85);"></i>
+                        <span class="icon icon-wheat" style="font-size:1.75rem; display:block; margin-bottom: var(--sp-6); color:rgba(255,255,255,0.85);"></span>
                         <p class="uppercase tracking-widest text-xs mb-4" style="color:rgba(255,255,255,0.5);">Sekolah & Kampus</p>
                         <h3 style="color:#fff; margin-bottom: var(--sp-4);">Paket Edukasi Budidaya</h3>
                         <p style="color:rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: var(--leading-normal); margin-bottom: var(--sp-8);">Belajar teknik budidaya Salak Nglumut kualitas ekspor, tur packing house, edukasi circular economy dan pengolahan limbah pertanian.</p>
@@ -114,7 +113,7 @@
 
                     <!-- Paket 2 -->
                     <div class="card dark fade-up delay-100" style="padding: var(--sp-10);">
-                        <i class="fa-solid fa-apple-whole" style="font-size:1.75rem; display:block; margin-bottom: var(--sp-6); color:rgba(255,255,255,0.85);"></i>
+                        <span class="icon icon-apple" style="font-size:1.75rem; display:block; margin-bottom: var(--sp-6); color:rgba(255,255,255,0.85);"></span>
                         <p class="uppercase tracking-widest text-xs mb-4" style="color:rgba(255,255,255,0.5);">Keluarga & Komunitas</p>
                         <h3 style="color:#fff; margin-bottom: var(--sp-4);">Wisata Petik Buah</h3>
                         <p style="color:rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: var(--leading-normal); margin-bottom: var(--sp-8);">Pengalaman petik buah langsung di sentra salak terbaik Indonesia. Sesi foto di hamparan kebun berlatar Merapi yang ikonik.</p>
@@ -129,7 +128,7 @@
 
                     <!-- Paket 3 -->
                     <div class="card fade-up delay-200" style="padding: var(--sp-10); background: var(--orange-salak);">
-                        <i class="fa-solid fa-building-columns" style="font-size:1.75rem; display:block; margin-bottom: var(--sp-6); color:rgba(255,255,255,0.85);"></i>
+                        <span class="icon icon-building" style="font-size:1.75rem; display:block; margin-bottom: var(--sp-6); color:rgba(255,255,255,0.85);"></span>
                         <p class="uppercase tracking-widest text-xs mb-4" style="color:rgba(255,255,255,0.8);">Instansi & BUMN</p>
                         <h3 style="color:#fff; margin-bottom: var(--sp-4);">Studi Banding (B2B)</h3>
                         <p style="color:rgba(255,255,255,0.85); font-size: var(--text-sm); line-height: var(--leading-normal); margin-bottom: var(--sp-8);">Presentasi resmi profil Gapoktan, tur lapangan lengkap, diskusi interaktif bersama pengelola, dan fasilitas pendopo kapasitas besar.</p>
@@ -215,8 +214,8 @@
                     </iframe>
                 </div>
                 <div class="flex justify-center mt-8 gap-4 flex-wrap fade-up">
-                    <div class="text-content text-sm"><i class="fa-solid fa-location-dot" style="margin-right:6px;"></i>99V8+5QH, Jrakah, Kaliurang, Kec. Srumbung, Kabupaten Magelang 56483</div>
-                    <a href="https://maps.app.goo.gl/XdoRZrutTGQzJPHN9" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-location-dot" style="margin-right:6px;"></i>Buka di Google Maps</a>
+                    <div class="text-content text-sm"><span class="icon icon-map-pin" style="margin-right:6px;"></span>99V8+5QH, Jrakah, Kaliurang, Kec. Srumbung, Kabupaten Magelang 56483</div>
+                    <a href="https://maps.app.goo.gl/XdoRZrutTGQzJPHN9" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer"><span class="icon icon-map" style="margin-right:6px;"></span>Buka di Google Maps</a>
                 </div>
             </div>
         </section>
@@ -225,51 +224,83 @@
         <section id="booking" class="section bg-dark">
             <div class="container">
                 <div class="agro-booking-wrap">
+
+                    <!-- Left: heading + WA shortcut -->
                     <div class="fade-up">
-                        <span class="label-pill" style="border-color:rgba(255,255,255,0.4); color:#fff;">BOOKING</span>
-                        <h2 style="color:#fff; margin: var(--sp-6) 0;">Rencanakan<br>Kunjungan Anda</h2>
-                        <p style="color:rgba(255,255,255,0.7); font-size: var(--text-sm); line-height: var(--leading-normal); margin-bottom: var(--sp-8);">Isi form di bawah untuk mengajukan reservasi. Tim Karang Taruna kami akan menghubungi Anda dalam 1×24 jam.</p>
-                        <p style="color:rgba(255,255,255,0.5); font-size: var(--text-xs);">Atau langsung hubungi via WhatsApp →</p>
-                        <a href="https://wa.me/6281234567893" class="btn" style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); color:#fff; margin-top: var(--sp-4);" target="_blank" rel="noopener noreferrer" data-wa="agrowisata"><i class="fa-brands fa-whatsapp" style="margin-right:8px;"></i>Chat WhatsApp</a>
+                        <span class="label-pill" style="border-color:rgba(255,255,255,0.3); color:rgba(255,255,255,0.7);">Reservasi Kunjungan</span>
+                        <h2 style="color:#fff; margin: var(--sp-6) 0; line-height:1.15;">Rencanakan<br>Kunjungan Anda</h2>
+                        <p style="color:rgba(255,255,255,0.65); font-size: var(--text-sm); line-height:1.75; margin-bottom: var(--sp-10);">Isi form dan kami akan menghubungi Anda dalam 1×24 jam untuk konfirmasi jadwal dan detail kunjungan.</p>
+
+                        <div class="booking-divider">
+                            <span>atau langsung chat</span>
+                        </div>
+
+                        <!-- ⚠️ TODO-KLIEN: Ganti SEMUA nomor "6281234567893" di seluruh halaman ini dengan nomor WhatsApp Tim Agrowisata / Karang Taruna Ngudi Luhur yang asli -->
+                        <a href="https://wa.me/6281234567893" class="booking-wa-btn" target="_blank" rel="noopener noreferrer" data-wa="agrowisata">
+                            <span class="icon icon-whatsapp" style="font-size:1.1rem;"></span>
+                            <div>
+                                <span class="booking-wa-label">Chat WhatsApp</span>
+                                <span class="booking-wa-hint">Biasanya dibalas dalam 30 menit</span>
+                            </div>
+                        </a>
                     </div>
 
-                    <div class="card solid fade-up delay-100" style="padding: var(--sp-10);">
-                        <form id="booking-form" class="grid gap-6">
-                            <div>
-                                <label for="name" class="block text-xs font-bold uppercase mb-2">Nama / Instansi *</label>
-                                <input type="text" id="name" name="name" class="form-input" placeholder="Nama lengkap atau nama instansi" required>
+                    <!-- Right: form card -->
+                    <div class="booking-form-card fade-up delay-100">
+                        <form id="booking-form" novalidate>
+
+                            <div class="field-wrap">
+                                <label for="name" class="field-label">Nama lengkap atau nama instansi</label>
+                                <input type="text" id="name" name="name" class="field-input" placeholder="contoh: SDN 2 Srumbung" required>
                             </div>
-                            <div class="grid grid-2 gap-4">
-                                <div>
-                                    <label for="date" class="block text-xs font-bold uppercase mb-2">Tanggal Rencana *</label>
-                                    <input type="date" id="date" name="date" class="form-input" required>
+
+                            <div class="field-row">
+                                <div class="field-wrap">
+                                    <label for="date" class="field-label">Tanggal rencana kunjungan</label>
+                                    <input type="date" id="date" name="date" class="field-input" required>
                                 </div>
-                                <div>
-                                    <label for="pax" class="block text-xs font-bold uppercase mb-2">Jumlah Orang *</label>
-                                    <input type="number" id="pax" name="pax" class="form-input" min="1" value="10" required>
+                                <div class="field-wrap">
+                                    <label for="pax" class="field-label">Jumlah orang</label>
+                                    <input type="number" id="pax" name="pax" class="field-input" min="1" value="10" required>
                                 </div>
                             </div>
-                            <div>
-                                <label for="package" class="block text-xs font-bold uppercase mb-2">Jenis Kunjungan *</label>
-                                <select id="package" name="package" class="form-input" required>
-                                    <option value="">Pilih paket...</option>
-                                    <option value="Edukasi Budidaya">Paket Edukasi Budidaya</option>
-                                    <option value="Petik Buah">Wisata Petik Buah</option>
-                                    <option value="Studi Banding">Studi Banding / Kunjungan Dinas</option>
-                                    <option value="Lainnya">Lainnya</option>
-                                </select>
+
+                            <div class="field-wrap">
+                                <label for="package" class="field-label">Jenis kunjungan</label>
+                                <div class="field-select-wrap">
+                                    <select id="package" name="package" class="field-input field-select" required>
+                                        <option value="" disabled selected>Pilih paket yang sesuai</option>
+                                        <option value="Edukasi Budidaya">Paket Edukasi Budidaya — Sekolah & Kampus</option>
+                                        <option value="Petik Buah">Wisata Petik Buah — Keluarga & Komunitas</option>
+                                        <option value="Studi Banding">Studi Banding / Kunjungan Dinas — Instansi & BUMN</option>
+                                        <option value="Lainnya">Lainnya</option>
+                                    </select>
+                                    <span class="field-chevron" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+                                    </span>
+                                </div>
                             </div>
-                            <div>
-                                <label for="wa" class="block text-xs font-bold uppercase mb-2">Nomor WhatsApp *</label>
-                                <input type="tel" id="wa" name="wa" class="form-input" placeholder="08xxxxxxxxxx" required>
+
+                            <div class="field-wrap">
+                                <label for="wa" class="field-label">Nomor WhatsApp aktif</label>
+                                <div class="field-phone-wrap">
+                                    <span class="field-phone-prefix">+62</span>
+                                    <input type="tel" id="wa" name="wa" class="field-input field-phone-input" placeholder="8xx xxxx xxxx" required>
+                                </div>
                             </div>
-                            <div>
-                                <label for="pesan" class="block text-xs font-bold uppercase mb-2">Keperluan / Pesan Tambahan</label>
-                                <textarea id="pesan" name="pesan" class="form-input" rows="3" placeholder="Ceritakan tujuan kunjungan atau kebutuhan khusus..."></textarea>
+
+                            <div class="field-wrap">
+                                <label for="pesan" class="field-label">Ceritakan kebutuhan Anda <span class="field-optional">— opsional</span></label>
+                                <textarea id="pesan" name="pesan" class="field-input" rows="3" placeholder="contoh: rombongan guru SD, 45 orang, ingin sesi edukasi budidaya salak dan panen langsung"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary w-full mt-4"><i class="fa-solid fa-calendar-check" style="margin-right:8px;"></i>Ajukan Booking</button>
+
+                            <button type="submit" class="btn-book">
+                                <span class="icon icon-calendar-check"></span>
+                                Ajukan Reservasi
+                            </button>
                         </form>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -296,9 +327,9 @@
             </div>
             <div>
                 <h4 class="text-white text-xs mb-6 uppercase tracking-widest font-bold">Kontak & Lokasi</h4>
-                <p class="text-sm text-white opacity-60 mb-4"><i class="fa-solid fa-location-dot" style="margin-right:6px;"></i>99V8+5QH, Jrakah, Kaliurang, Kec. Srumbung, Magelang 56483</p>
-                <a href="https://maps.app.goo.gl/XdoRZrutTGQzJPHN9" class="text-sm text-white opacity-60 block mb-2" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map-location-dot" style="margin-right:6px;"></i>Buka di Google Maps</a>
-                <a href="https://wa.me/6281234567893" class="text-sm text-white opacity-60 block" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp" style="margin-right:6px;"></i>WhatsApp Agrowisata</a>
+                <p class="text-sm text-white opacity-60 mb-4"><span class="icon icon-map-pin" style="margin-right:6px;"></span>99V8+5QH, Jrakah, Kaliurang, Kec. Srumbung, Magelang 56483</p>
+                <a href="https://maps.app.goo.gl/XdoRZrutTGQzJPHN9" class="text-sm text-white opacity-60 block mb-2" target="_blank" rel="noopener noreferrer"><span class="icon icon-map" style="margin-right:6px;"></span>Buka di Google Maps</a>
+                <a href="https://wa.me/6281234567893" class="text-sm text-white opacity-60 block" target="_blank" rel="noopener noreferrer"><span class="icon icon-whatsapp" style="margin-right:6px;"></span>WhatsApp Agrowisata</a>
             </div>
         </div>
         <div class="container" style="margin-top: var(--sp-12); padding-top: var(--sp-8); border-top: 1px solid rgba(255,255,255,0.07);">
