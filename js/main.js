@@ -9,9 +9,21 @@ function initNavbar() {
     const header = document.querySelector('.header');
     if (!header) return;
 
-    window.addEventListener('scroll', () => {
-        header.classList.toggle('scrolled', window.scrollY > 50);
-    }, { passive: true });
+    const darkSections = document.querySelectorAll('section.bg-dark');
+
+    function updateNavTheme() {
+        const navY = 60;
+        let isDark = false;
+        darkSections.forEach(section => {
+            const r = section.getBoundingClientRect();
+            if (r.top <= navY && r.bottom >= 0) isDark = true;
+        });
+        header.classList.toggle('on-dark', isDark);
+        header.classList.toggle('on-light', !isDark);
+    }
+
+    updateNavTheme();
+    window.addEventListener('scroll', updateNavTheme, { passive: true });
 
     const toggle = document.querySelector('.menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');

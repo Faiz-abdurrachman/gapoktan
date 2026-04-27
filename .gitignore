@@ -1,0 +1,9 @@
+# Draft & dokumentasi — tidak perlu masuk repo
+*.md
+*.pdf
+referensi/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -66,8 +66,42 @@
   flex-wrap: wrap;
 }
 
-.hero-image-wrap {
+.hero .hero-image-wrap {
   display: none !important;
+}
+
+/* About section image column */
+.about .hero-image-wrap {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+}
+
+.about .hero-image-wrap img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.about-float-badge {
+  position: absolute;
+  bottom: 36px;
+  right: 24px;
+  background: rgba(246, 245, 241, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  padding: 18px 22px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  min-width: 140px;
+}
+
+@media (max-width: 1023px) {
+  .about .hero-image-wrap {
+    display: none;
+  }
 }
 
 /* ─── [S2] Impact Section ────────────────────────────── */
