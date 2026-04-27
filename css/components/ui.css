@@ -211,3 +211,24 @@
 .card-body {
   padding: 0;
 }
+
+/* ─── View Transitions (page navigation) ─────────────── */
+
+@keyframes _vt-in {
+  from { opacity: 0; translate: 0 10px; }
+}
+@keyframes _vt-out {
+  to   { opacity: 0; translate: 0 -6px; }
+}
+
+::view-transition-old(root) {
+  animation: 150ms ease-in  both _vt-out;
+}
+::view-transition-new(root) {
+  animation: 220ms ease-out both _vt-in;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) { animation: none; }
+}
