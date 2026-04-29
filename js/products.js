@@ -9,7 +9,7 @@ const PRODUCTS = [
         name: "Kripik Salak Premium",
         category: "makanan",
         price: "Rp 25.000",
-        image: "images/umkm/product_1.webp",
+        image: "assets/images/umkm/product_1.webp",
         desc: "Camilan renyah dari salak Nglumut pilihan dengan proses vacuum frying."
     },
     {
@@ -17,7 +17,7 @@ const PRODUCTS = [
         name: "Dodol Salak Asli",
         category: "makanan",
         price: "Rp 20.000",
-        image: "images/umkm/product_2.webp",
+        image: "assets/images/umkm/product_2.webp",
         desc: "Manis legit dengan aroma salak yang kuat, diolah secara tradisional."
     },
     {
@@ -25,7 +25,7 @@ const PRODUCTS = [
         name: "Kopi Biji Salak",
         category: "minuman",
         price: "Rp 45.000",
-        image: "images/umkm/product_3.webp",
+        image: "assets/images/umkm/product_3.webp",
         desc: "Inovasi minuman menyehatkan tanpa kafein dari biji salak pilihan."
     },
     {
@@ -33,7 +33,7 @@ const PRODUCTS = [
         name: "Sirup Salak Nglumut",
         category: "minuman",
         price: "Rp 35.000",
-        image: "images/umkm/product_4.webp",
+        image: "assets/images/umkm/product_4.webp",
         desc: "Segar dan alami, tanpa pemanis buatan. Cocok untuk hidangan pesta."
     },
     {
@@ -41,7 +41,7 @@ const PRODUCTS = [
         name: "Bakpia Salak",
         category: "makanan",
         price: "Rp 30.000",
-        image: "images/umkm/product_5.webp",
+        image: "assets/images/umkm/product_5.webp",
         desc: "Khas Jogja-Magelang dengan isian salak yang lumer di mulut."
     },
     {
@@ -49,7 +49,7 @@ const PRODUCTS = [
         name: "Manisan Salak",
         category: "makanan",
         price: "Rp 15.000",
-        image: "images/umkm/product_6.webp",
+        image: "assets/images/umkm/product_6.webp",
         desc: "Buah salak segar dalam rendaman sirup yang manis dan menyegarkan."
     },
     {
@@ -57,7 +57,7 @@ const PRODUCTS = [
         name: "Selai Salak",
         category: "makanan",
         price: "Rp 20.000",
-        image: "images/umkm/product_7.webp",
+        image: "assets/images/umkm/product_7.webp",
         desc: "Olesan manis dari salak Nglumut pilihan — sempurna untuk sarapan dan camilan keluarga."
     },
     {
@@ -65,7 +65,7 @@ const PRODUCTS = [
         name: "Kurma Salak",
         category: "makanan",
         price: "Rp 25.000",
-        image: "images/umkm/product_8.webp",
+        image: "assets/images/umkm/product_8.webp",
         desc: "Inovasi olahan salak yang menyerupai kurma — manis, bergizi, dan satu-satunya dari dapur KWT Ngudi Luhur."
     }
 ];
@@ -109,10 +109,10 @@ function renderProducts(products) {
                 <img src="${p.image}" alt="${p.name}">
             </div>
             <div class="card-body">
-                <h3 class="mb-2" style="font-size: 1.125rem;">${p.name}</h3>
+                <h3 class="mb-2 text-lg">${p.name}</h3>
                 <span class="product-price">${p.price}</span>
                 <p class="text-xs text-content mb-6">${p.desc}</p>
-                <a href="https://wa.me/6281234567892?text=Halo KWT Ngudi Luhur, saya ingin pesan ${p.name}" class="btn btn-green btn-sm" target="_blank"><span class="icon icon-whatsapp" style="margin-right:6px;"></span>Pesan via WhatsApp</a>
+                <a href="https://wa.me/6281234567892?text=Halo KWT Ngudi Luhur, saya ingin pesan ${p.name}" class="btn btn-green btn-sm" target="_blank"><span class="icon icon-whatsapp mr-6"></span>Pesan via WhatsApp</a>
             </div>
         `;
         

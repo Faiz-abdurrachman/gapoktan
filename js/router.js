@@ -2,6 +2,7 @@
 
 const ROUTES = {
     '/': {
+        key:          'home',
         page:         'pages/home.html',
         title:        'Gapoktan Ngudi Luhur — Pusat Agribisnis Salak Nglumut Premium',
         navActive:    null,
@@ -11,6 +12,7 @@ const ROUTES = {
         footerWa:     { href: 'https://wa.me/6281234567890', text: 'WhatsApp Gapoktan' },
     },
     '/ekspor': {
+        key:          'ekspor',
         page:         'pages/ekspor.html',
         title:        'Ekspor Salak Nglumut Premium — Gapoktan Ngudi Luhur Srumbung Magelang',
         navActive:    'ekspor',
@@ -20,6 +22,7 @@ const ROUTES = {
         footerWa:     { href: 'https://wa.me/6281234567891', text: 'WhatsApp Tim Ekspor' },
     },
     '/umkm': {
+        key:          'umkm',
         page:         'pages/umkm.html',
         title:        'Produk Olahan Salak Premium — UMKM Ngudi Luhur Magelang',
         navActive:    'umkm',
@@ -29,6 +32,7 @@ const ROUTES = {
         footerWa:     { href: 'https://wa.me/6281234567892', text: 'WhatsApp KWT' },
     },
     '/agrowisata': {
+        key:          'agrowisata',
         page:         'pages/agrowisata.html',
         title:        'Agrowisata Srumbung Magelang — Wisata Edukasi & Petik Salak Lereng Merapi',
         navActive:    'agrowisata',
@@ -38,6 +42,8 @@ const ROUTES = {
         footerWa:     { href: 'https://wa.me/6281234567893', text: 'WhatsApp Agrowisata' },
     },
 };
+
+let _activeRouteClass = null;
 
 function _resolveRoute(pathname) {
     const path = pathname.replace(/\/$/, '') || '/';
@@ -52,6 +58,7 @@ async function _fetchFragment(url) {
 
 function _applyRoute(route) {
     document.title = route.title;
+    _syncRouteState(route.key);
 
     document.querySelectorAll('.nav-link[data-page]').forEach(el => {
         el.classList.toggle('active', el.dataset.page === route.navActive);
@@ -79,11 +86,32 @@ function _applyRoute(route) {
     const footerWa = document.getElementById('footer-wa');
     if (footerWa) {
         footerWa.href = route.footerWa.href;
-        footerWa.innerHTML = '<span class="icon icon-whatsapp" style="margin-right:6px;"></span>' + route.footerWa.text;
+        footerWa.innerHTML = '<span class="icon icon-whatsapp mr-6"></span>' + route.footerWa.text;
     }
 
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
+}
+
+function _syncRouteState(routeKey) {
+    const safeKey = routeKey || 'home';
+    const nextClass = `route-${safeKey}`;
+    const app = document.getElementById('app');
+
+    if (_activeRouteClass) {
+        document.body.classList.remove(_activeRouteClass);
+        app?.classList.remove(_activeRouteClass);
+    }
+
+    document.body.dataset.route = safeKey;
+    document.body.classList.add(nextClass);
+
+    if (app) {
+        app.dataset.route = safeKey;
+        app.classList.add(nextClass);
+    }
+
+    _activeRouteClass = nextClass;
 }
 
 function _runPageInit() {
@@ -147,8 +175,17 @@ document.addEventListener('DOMContentLoaded', async () => {
         let url;
         try { url = new URL(a.href, location.href); } catch { return; }
         if (url.origin !== location.origin) return;
-        if (url.pathname === location.pathname && url.hash) return;
-        if (url.pathname === location.pathname) return;
+
+        if (url.pathname === location.pathname && url.hash) {
+            // Allow native in-page anchor navigation.
+            return;
+        }
+
+        if (url.pathname === location.pathname) {
+            // Stay in SPA mode even when user clicks active nav link.
+            e.preventDefault();
+            return;
+        }
 
         e.preventDefault();
         _navigateTo(url.pathname, true);

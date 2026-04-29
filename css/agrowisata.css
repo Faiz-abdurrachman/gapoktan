@@ -7,7 +7,7 @@
     display: flex;
     align-items: flex-end;
     padding-bottom: var(--sp-24);
-    background: url('../images/hero/DSC04999.webp') center/cover no-repeat;
+    background: url('../assets/images/hero/DSC04999.webp') center/cover no-repeat;
 }
 
 .agro-hero-overlay {
@@ -24,6 +24,34 @@
     position: relative;
     z-index: 2;
     padding-top: 140px;
+}
+
+.agro-hero-lead {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--text-lg);
+    max-width: 520px;
+    margin-bottom: var(--sp-10);
+    line-height: var(--leading-normal);
+}
+
+.agro-order-1 {
+    order: 1;
+}
+
+.agro-order-2 {
+    order: 2;
+}
+
+.agro-story-image-frame {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.agro-story-image {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
 }
 
 /* ─── Feature List (inside package cards) ────────────── */
@@ -49,6 +77,60 @@
     left: 0;
     color: var(--orange-salak);
     font-weight: 700;
+}
+
+.agro-feature-list-strong li {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.agro-package-icon {
+    font-size: 1.75rem;
+    display: block;
+    margin-bottom: var(--sp-6);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.agro-package-meta {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.agro-package-meta-strong {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.agro-package-desc {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    margin-bottom: var(--sp-8);
+}
+
+.agro-package-desc-strong {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--text-sm);
+    line-height: var(--leading-normal);
+    margin-bottom: var(--sp-8);
+}
+
+.agro-card-highlight {
+    background: var(--orange-salak);
+}
+
+.agro-btn-highlight {
+    background: #fff;
+    color: var(--orange-salak);
+}
+
+.agro-copy-520 {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.agro-copy-480 {
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ─── Gallery Grid ───────────────────────────────────── */
@@ -111,6 +193,16 @@
     transform: translateY(0);
 }
 
+.agro-map-frame {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.agro-map-frame iframe {
+    border: 0;
+}
+
 /* ─── Booking Layout ─────────────────────────────────── */
 .agro-booking-wrap {
     display: grid;
@@ -167,6 +259,10 @@
     flex-shrink: 0;
     color: #4ADE80;
 }
+
+.agro-wa-icon {
+    font-size: 1.1rem;
+}
 .booking-wa-label {
     display: block;
     font-size: var(--text-sm);
@@ -177,6 +273,19 @@
     font-size: 0.7rem;
     color: rgba(255,255,255,0.45);
     margin-top: 2px;
+}
+
+.agro-booking-title {
+    color: #fff;
+    margin: var(--sp-6) 0;
+    line-height: 1.15;
+}
+
+.agro-booking-desc {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: var(--text-sm);
+    line-height: 1.75;
+    margin-bottom: var(--sp-10);
 }
 
 /* ─── Booking Form Card ──────────────────────────────── */

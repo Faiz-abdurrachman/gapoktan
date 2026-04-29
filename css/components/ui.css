@@ -102,6 +102,16 @@
     font-size: var(--text-sm);
 }
 
+.btn-white-dark {
+  background: #fff;
+  color: var(--seed-text-dark);
+}
+
+.btn-outline-white {
+  border-color: #fff;
+  color: #fff;
+}
+
 /* ─── Tiny Outline Labels (Seed style) ───────────────── */
 
 .label-pill {
@@ -119,6 +129,26 @@
 
 .label-pill.white {
     color: var(--seed-text-light);
+}
+
+.label-pill.on-dark-strong {
+  border-color: #fff;
+  color: #fff;
+}
+
+.label-pill.on-dark {
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #fff;
+}
+
+.label-pill.on-dark-soft {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #fff;
+}
+
+.label-pill.on-dark-muted {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* ─── Cards (Seed's Product Card Style) ──────────────── */

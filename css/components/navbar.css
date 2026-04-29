@@ -57,6 +57,20 @@
 
 .logo:hover { opacity: 0.8; }
 
+.logo-brand-text {
+    font-weight: 500;
+}
+
+.logo-brand-dot {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: var(--orange-salak);
+    border-radius: 50%;
+    margin-left: 2px;
+    transform: translateY(-4px);
+}
+
 /* ─── Nav Links ──────────────────────────────────────── */
 .nav-list {
     display: none;
