@@ -7,7 +7,7 @@
     display: flex;
     align-items: flex-end;
     padding-bottom: var(--sp-24);
-    background: url('../../images/hero/DSC04963 (1).webp') center/cover no-repeat;
+    background: url('../images/hero/DSC04963 (1).webp') center/cover no-repeat;
 }
 
 .ekspor-hero-overlay {
@@ -106,6 +106,6 @@
     transform: scale(1.03);
 }
 
-/* ─── Utility overrides ──────────────────────────────── */
+/* ─── Utility ────────────────────────────────────────── */
 .hover-opacity { transition: opacity var(--transition-fast); }
 .hover-opacity:hover { opacity: 1 !important; }

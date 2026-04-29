@@ -35,8 +35,3 @@ function initBookingForm() {
     });
 }
 
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initBookingForm);
-} else {
-    initBookingForm();
-}

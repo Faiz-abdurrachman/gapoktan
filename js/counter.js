@@ -1,9 +1,5 @@
 /* ─── Counter Logic ──────────────────────────────────── */
 
-document.addEventListener('DOMContentLoaded', () => {
-    initCounters();
-});
-
 function initCounters() {
     const counterElements = document.querySelectorAll('.counter-number');
     

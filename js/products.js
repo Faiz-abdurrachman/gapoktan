@@ -70,10 +70,6 @@ const PRODUCTS = [
     }
 ];
 
-document.addEventListener('DOMContentLoaded', () => {
-    initCatalog();
-});
-
 function initCatalog() {
     const grid = document.getElementById('product-grid');
     if (!grid) return;

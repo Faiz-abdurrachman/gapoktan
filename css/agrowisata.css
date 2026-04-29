@@ -7,7 +7,7 @@
     display: flex;
     align-items: flex-end;
     padding-bottom: var(--sp-24);
-    background: url('../../images/hero/DSC04999.webp') center/cover no-repeat;
+    background: url('../images/hero/DSC04999.webp') center/cover no-repeat;
 }
 
 .agro-hero-overlay {
