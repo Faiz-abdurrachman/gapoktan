@@ -456,32 +456,15 @@ textarea.field-input {
     transform: scale(0.99);
 }
 
+/* ─── Form Validation States ─────────────────────────── */
+.field-input.field-error {
+    border-color: #ef4444; /* Vibrant Red */
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+    animation: shake-error 0.4s ease;
 }
 
-/* Re-apply the shimmer to the submit button */
-.btn-book::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -80%;
-    width: 55%;
-    height: 200%;
-    background: linear-gradient(105deg, transparent, rgba(255,255,255,0.26), transparent);
-    transform: skewX(-20deg);
-    transition: left 0.6s ease;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.btn-book:hover::before {
-    left: 135%;
-}
-
-.btn-book:hover {
-    background: var(--green-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
-}
-.btn-book:active {
-    transform: scale(0.99);
+@keyframes shake-error {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-4px); }
+    40%, 80% { transform: translateX(4px); }
 }

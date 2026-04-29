@@ -5,16 +5,46 @@ function initBookingForm() {
     if (!bookingForm || bookingForm._bound) return;
     bookingForm._bound = true;
 
+    // Reset error border when user starts typing/selecting
+    bookingForm.addEventListener('input', (e) => {
+        if (e.target.classList.contains('field-error')) {
+            e.target.classList.remove('field-error');
+        }
+    });
+
     bookingForm.addEventListener('submit', (e) => {
         e.preventDefault();
 
+        // 1. Basic Validation
+        let isValid = true;
+        const requiredFields = ['name', 'date', 'pax', 'package', 'wa'];
+        
+        requiredFields.forEach(fieldId => {
+            const input = document.getElementById(fieldId);
+            if (!input || !input.value.trim()) {
+                if (input) input.classList.add('field-error');
+                isValid = false;
+            } else {
+                if (input) input.classList.remove('field-error');
+            }
+        });
+
+        if (!isValid) {
+            const firstError = bookingForm.querySelector('.field-error');
+            if (firstError) {
+                firstError.focus();
+            }
+            return; // Stop form from submitting to WA
+        }
+
+        // 2. Process Data
         const formData = new FormData(bookingForm);
-        const name  = formData.get('name')    || '-';
-        const date  = formData.get('date')    || '-';
-        const pax   = formData.get('pax')     || '-';
-        const pkg   = formData.get('package') || '-';
-        const wa    = formData.get('wa')      || '-';
-        const pesan = formData.get('pesan')   || '';
+        const name  = formData.get('name');
+        const date  = formData.get('date');
+        const pax   = formData.get('pax');
+        const pkg   = formData.get('package');
+        const wa    = formData.get('wa');
+        const pesan = formData.get('pesan') || '';
 
         // ⚠️ TODO-KLIEN: Ganti nomor di bawah dengan nomor WA Tim Agrowisata yang asli
         const whatsappNumber = "6281234567893";
