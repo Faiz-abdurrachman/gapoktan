@@ -1,28 +1,28 @@
 :root {
-  /* ─── Seed.com Color Palette ───────────────────────── */
-  --seed-bg-light   : #f6f5f1; /* The soft off-white background */
-  --seed-bg-dark    : #153921; /* The intense dark green background */
-  --seed-bg-dark-elevated: #1e4a2c; /* Slightly lighter flat green */
+  /* ─── Ngudi Luhur Color Palette (Earthy & Premium) ────────── */
+  --seed-bg-light   : #F9F8F6; /* Softer, slightly warmer off-white like raw paper */
+  --seed-bg-dark    : #1B3624; /* Deep, rich forest green, less "tech-startup" neon */
+  --seed-bg-dark-elevated: #23452E; /* Slightly lighter natural green for elevated cards */
   
-  --seed-text-dark  : #153921;
-  --seed-text-light : #ffffff;
+  --seed-text-dark  : #1A2E20; /* Very dark green/grey for text, softer than pure black */
+  --seed-text-light : #FAF9F6;
   
-  --seed-primary    : #153921;
-  --seed-secondary  : #f6f5f1;
+  --seed-primary    : #1B3624;
+  --seed-secondary  : #F9F8F6;
 
   /* ─── Ngudi Luhur Accents ──────────────────────────── */
-  --orange-salak    : #E07B39; /* Keeping but using sparingly */
+  --orange-salak    : #D46A2C; /* Slightly deeper, more natural orange (like ripe salak skin) */
+  --orange-salak-light: #FCECE3; /* For subtle highlights/backgrounds */
   
   /* ─── Background ───────────────────────────────────── */
   --bg-page         : var(--seed-bg-light);
-  --bg-white        : #ffffff;
+  --bg-white        : #FFFFFF;
   --bg-dark         : var(--seed-bg-dark);
 
-  /* ─── Typography (Strictly Sans-Serif) ─────────────── */
-  --font-sans     : 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  
-  --font-display    : var(--font-sans);
-  --font-body       : var(--font-sans);
+  /* ─── Typography (Serif Heading, Sans-serif Body) ──── */
+  --font-display    : 'Lora', 'Times New Roman', Times, serif; /* Elegant, premium feel for headings */
+  --font-body       : 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* Clean, modern, warm sans for body */
+  --font-sans       : var(--font-body); /* Legacy fallback */
 
   --text-xs         : 0.75rem;    /* 12px */
   --text-sm         : 0.875rem;   /* 14px */
@@ -35,14 +35,15 @@
   --text-5xl        : 3.5rem;     /* 56px */
   --text-6xl        : clamp(2.5rem, 6vw, 4.2rem); /* Large Hero Titles */
 
-  --leading-tight   : 1.1;
-  --leading-normal  : 1.6;
-  --tracking-tight  : -0.04em;  /* Tighter tracking for elegance */
+  --leading-tight   : 1.15; /* Slightly relaxed for Serif */
+  --leading-normal  : 1.65; /* Good readability for body text */
+  --tracking-tight  : -0.02em;  /* Less tight than Inter */
   --tracking-wide   : 0.05em;
 
   --weight-regular  : 400;
   --weight-medium   : 500;
   --weight-semibold : 600;
+  --weight-bold     : 700;
 
   /* ─── Spacing ──────────────────────────────────────── */
   --sp-1   : 0.25rem;
@@ -59,47 +60,46 @@
 
   --container-max   : 1200px;
   --section-py      : clamp(4rem, 8vw, 8rem);
-  --section-px      : clamp(1rem, 5vw, 2.5rem);
+  --section-px      : clamp(1.25rem, 5vw, 2.5rem);
 
-  /* ─── Border Radius ────────────────────────────────── */
-  --radius-sm       : 8px;
-  --radius-md       : 16px;
-  --radius-lg       : 40px; /* Big rounded corners observed */
-  --radius-pill     : 9999px; /* For buttons and navbar */
+  /* ─── Border Radius (More Natural, Less Web3) ──────── */
+  --radius-sm       : 6px;
+  --radius-md       : 12px; /* Was 16px */
+  --radius-lg       : 24px; /* Was 40px - now much more natural */
+  --radius-pill     : 9999px; /* Keep for primary CTA buttons only */
 
   /* ─── Transitions ──────────────────────────────────── */
-  --transition-fast : 150ms ease;
-  --transition-base : 300ms ease;
-  --transition-slow : 500ms ease;
+  --transition-fast : 200ms ease; /* Slower, more deliberate than 150ms */
+  --transition-base : 350ms ease;
+  --transition-slow : 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Smooth, premium easing */
 
   /* ─── Legacy/Compat tokens (dipakai di subpage CSS) ── */
-  --green-primary   : #153921;
-  --green-dark      : #0d2415;
-  --green-light     : #eaf4ee;
-  --green-surface   : #d8f3dc;
-  --brown-primary   : #6B4226;
+  --green-primary   : var(--seed-primary);
+  --green-dark      : #112417;
+  --green-light     : #E6EDE9;
+  --green-surface   : #D4E0D8;
+  --brown-primary   : #5C3D2E;
   --cream           : #FAF7F2;
-  --orange-dark     : #C86B2D;
-  --orange-light    : #FDF0E8;
+  --orange-dark     : #B85922;
+  --orange-light    : var(--orange-salak-light);
   --text-primary    : var(--seed-text-dark);
-  --text-secondary  : #4B5563;
-  --text-muted      : #9CA3AF;
+  --text-secondary  : #596B60; /* Earthy grey-green instead of harsh grey */
+  --text-muted      : #8CA094;
   --text-white      : #FFFFFF;
-  --bg-page         : var(--seed-bg-light);
-  --bg-white        : #ffffff;
-  --border-light    : #E5E7EB;
-  --border-medium   : #D1D5DB;
-  --success         : #16A34A;
-  --error           : #DC2626;
-  --warning         : #D97706;
-  --shadow-sm       : 0 1px 3px rgba(0,0,0,0.08);
-  --shadow-md       : 0 4px 16px rgba(0,0,0,0.10);
-  --shadow-lg       : 0 8px 32px rgba(0,0,0,0.12);
-  --shadow-green    : 0 4px 20px rgba(21,57,33,0.15);
-  --font-body       : var(--font-sans);
-  --font-display    : var(--font-sans);
-  --text-white-muted: rgba(255,255,255,0.65);
-  --leading-loose   : 1.85;
+  --border-light    : rgba(27, 54, 36, 0.08); /* Derived from primary green */
+  --border-medium   : rgba(27, 54, 36, 0.15);
+  --success         : #248C46;
+  --error           : #C23A3A;
+  --warning         : #CC7A29;
+  
+  /* Natural Shadows (Softer, tinted with green/brown) */
+  --shadow-sm       : 0 2px 4px rgba(27, 54, 36, 0.04);
+  --shadow-md       : 0 8px 24px rgba(27, 54, 36, 0.06);
+  --shadow-lg       : 0 16px 40px rgba(27, 54, 36, 0.08);
+  --shadow-green    : 0 12px 32px rgba(27, 54, 36, 0.15);
+  
+  --text-white-muted: rgba(255,255,255,0.7);
+  --leading-loose   : 1.8;
   --sp-5            : 1.25rem;
   --sp-20           : 5rem;
   --radius-full     : 9999px;

@@ -15,8 +15,8 @@
     inset: 0;
     background: linear-gradient(
         to right,
-        rgba(15, 50, 30, 0.88) 40%,
-        rgba(15, 50, 30, 0.40) 100%
+        rgba(27, 54, 36, 0.88) 35%,
+        rgba(27, 54, 36, 0.40) 100%
     );
 }
 
@@ -29,7 +29,7 @@
 .agro-hero-lead {
     color: rgba(255, 255, 255, 0.85);
     font-size: var(--text-lg);
-    max-width: 520px;
+    max-width: 540px;
     margin-bottom: var(--sp-10);
     line-height: var(--leading-normal);
 }
@@ -43,9 +43,9 @@
 }
 
 .agro-story-image-frame {
-    border-radius: var(--radius-lg);
+    border-radius: 4px var(--radius-lg) 4px var(--radius-lg); /* Opposite organic leaf shape */
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-lg);
 }
 
 .agro-story-image {

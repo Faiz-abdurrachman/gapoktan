@@ -14,7 +14,6 @@ h1, h2, h3, h4, .font-display {
   font-family: var(--font-display);
   line-height: var(--leading-tight);
   color: var(--seed-text-dark);
-  font-weight: 400;
   letter-spacing: var(--tracking-tight);
 }
 

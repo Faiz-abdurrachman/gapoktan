@@ -6,7 +6,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 24px;
+  padding: 12px 28px; /* Slightly wider for elegance */
   border-radius: var(--radius-pill);
   font-family: var(--font-sans);
   font-size: var(--text-base);
@@ -19,7 +19,7 @@
               color var(--transition-base),
               border-color var(--transition-base),
               box-shadow var(--transition-base),
-              transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+              transform var(--transition-base),
               opacity var(--transition-base);
 }
 
@@ -35,6 +35,7 @@
   transform: skewX(-20deg);
   transition: left 0.6s ease;
   pointer-events: none;
+  z-index: 1;
 }
 
 .btn:hover::before {
@@ -47,8 +48,9 @@
 }
 
 .btn-primary:hover {
+  background-color: var(--green-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(21, 57, 33, 0.38);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-salak {
@@ -57,22 +59,22 @@
 }
 
 .btn-salak:hover {
-  background-color: #c96b30;
+  background-color: var(--orange-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(224, 123, 57, 0.42);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-outline {
   background-color: transparent;
   color: var(--seed-text-dark);
-  border: 1px solid var(--seed-text-dark);
+  border: 1.5px solid var(--seed-text-dark); /* Thicker border for better presence */
 }
 
 .btn-outline:hover {
   background-color: var(--seed-text-dark);
   color: var(--seed-text-light);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(21, 57, 33, 0.3);
+  box-shadow: var(--shadow-sm);
 }
 
 .btn-link {
@@ -80,12 +82,11 @@
   border-radius: 0;
   background: transparent;
   color: var(--seed-text-dark);
-  border-bottom: 1px solid currentColor;
-  font-weight: var(--weight-medium);
+  border-bottom: 1.5px solid currentColor;
+  font-weight: var(--weight-semibold);
   overflow: visible;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
 }
-
-.btn-link::before { display: none; }
 
 .btn-link:hover {
   color: var(--orange-salak);
@@ -98,18 +99,30 @@
 }
 
 .btn-sm {
-    padding: 8px 16px;
+    padding: 8px 20px;
     font-size: var(--text-sm);
 }
 
 .btn-white-dark {
-  background: #fff;
+  background: var(--bg-white);
   color: var(--seed-text-dark);
 }
 
+.btn-white-dark:hover {
+  background: var(--seed-secondary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
 .btn-outline-white {
-  border-color: #fff;
+  border-color: rgba(255,255,255,0.7);
   color: #fff;
+}
+
+.btn-outline-white:hover {
+  background: #fff;
+  color: var(--seed-text-dark);
+  border-color: #fff;
 }
 
 /* ─── Tiny Outline Labels (Seed style) ───────────────── */
@@ -166,24 +179,7 @@
   border: 1px solid rgba(0,0,0,0.05);
 }
 
-/* Slide-in accent bar from below — the "slide reveal" */
-.card::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  border-radius: 0 0 var(--radius-md) var(--radius-md);
-  background: var(--card-accent);
-  transform: translateY(4px);
-  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
-  pointer-events: none;
-}
 
-.card:hover::after {
-  transform: translateY(0);
-}
 
 .card.solid {
     background-color: var(--seed-bg-light);

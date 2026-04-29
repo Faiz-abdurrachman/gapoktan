@@ -15,8 +15,8 @@
     inset: 0;
     background: linear-gradient(
         to right,
-        rgba(60, 30, 10, 0.82) 40%,
-        rgba(60, 30, 10, 0.3) 100%
+        rgba(92, 61, 46, 0.85) 35%,
+        rgba(92, 61, 46, 0.35) 100%
     );
 }
 
@@ -29,15 +29,15 @@
 .umkm-hero-lead {
     color: rgba(255, 255, 255, 0.85);
     font-size: var(--text-lg);
-    max-width: 500px;
+    max-width: 540px;
     margin-bottom: var(--sp-10);
     line-height: var(--leading-normal);
 }
 
 .umkm-story-image-frame {
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-lg) 4px var(--radius-lg) 4px; /* Organic leaf shape */
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    box-shadow: var(--shadow-lg);
 }
 
 .umkm-story-image {
