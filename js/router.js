@@ -5,6 +5,8 @@ const ROUTES = {
         key:          'home',
         page:         'pages/home.html',
         title:        'Gapoktan Ngudi Luhur — Pusat Agribisnis Salak Nglumut Premium',
+        description:  'Gapoktan Ngudi Luhur — pengelola sentra salak Nglumut terbaik Indonesia di lereng Merapi, Srumbung, Magelang. Ekspor, UMKM, dan Agrowisata.',
+        image:        '/assets/images/hero/section1.webp',
         navActive:    null,
         mobileActive: 'beranda',
         navRightHtml: '<a href="https://wa.me/6281234567890" class="nav-btn">Hubungi Kami</a>',
@@ -15,6 +17,8 @@ const ROUTES = {
         key:          'ekspor',
         page:         'pages/ekspor.html',
         title:        'Ekspor Salak Nglumut Premium — Gapoktan Ngudi Luhur Srumbung Magelang',
+        description:  'Salak Nglumut premium berkualitas ekspor — dikirim 30 hingga 50 ton setiap minggu ke China, Kamboja, Eropa, dan Timor Leste. Terstandarisasi dan terpercaya.',
+        image:        '/assets/images/hero/DSC04963 (1).webp',
         navActive:    'ekspor',
         mobileActive: 'ekspor',
         navRightHtml: '<span class="nav-cta-text">Hubungi Manager Ekspor</span><a href="https://wa.me/6281234567891" class="nav-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>',
@@ -25,6 +29,8 @@ const ROUTES = {
         key:          'umkm',
         page:         'pages/umkm.html',
         title:        'Produk Olahan Salak Premium — UMKM Ngudi Luhur Magelang',
+        description:  'Produk olahan salak premium bernilai tinggi karya Kelompok Wanita Tani (KWT) Ngudi Luhur. Dari camilan sehat hingga inovasi Kopi Biji Salak.',
+        image:        '/assets/images/umkm/product_3.webp',
         navActive:    'umkm',
         mobileActive: 'umkm',
         navRightHtml: '<span class="nav-cta-text">Hubungi KWT</span><a href="https://wa.me/6281234567892" class="nav-btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>',
@@ -35,19 +41,33 @@ const ROUTES = {
         key:          'agrowisata',
         page:         'pages/agrowisata.html',
         title:        'Agrowisata Srumbung Magelang — Wisata Edukasi & Petik Salak Lereng Merapi',
+        description:  'Pengalaman wisata edukasi agribisnis berkelanjutan di lereng Gunung Merapi. Paket edukasi budidaya, wisata petik buah, dan studi banding instansi.',
+        image:        '/assets/images/hero/DSC04999.webp',
         navActive:    'agrowisata',
         mobileActive: 'agrowisata',
         navRightHtml: '<span class="nav-cta-text">Reservasi Kunjungan</span><a href="#booking" class="nav-btn">Form Booking</a>',
         mobileCta:    { href: '#booking', text: 'Booking Kunjungan', external: false },
         footerWa:     { href: 'https://wa.me/6281234567893', text: 'WhatsApp Agrowisata' },
     },
+    '404': {
+        key:          '404',
+        page:         'pages/404.html',
+        title:        'Halaman Tidak Ditemukan — Gapoktan Ngudi Luhur',
+        description:  'Halaman yang Anda cari tidak dapat ditemukan. Kembali ke beranda Gapoktan Ngudi Luhur.',
+        image:        '/assets/images/hero/DSC05001.webp',
+        navActive:    null,
+        mobileActive: null,
+        navRightHtml: '<a href="/" class="nav-btn">Kembali ke Beranda</a>',
+        mobileCta:    { href: '/', text: 'Kembali ke Beranda', external: false },
+        footerWa:     { href: 'https://wa.me/6281234567890', text: 'WhatsApp Gapoktan' },
+    }
 };
 
 let _activeRouteClass = null;
 
 function _resolveRoute(pathname) {
     const path = pathname.replace(/\/$/, '') || '/';
-    return ROUTES[path] || ROUTES['/'];
+    return ROUTES[path] || ROUTES['404'];
 }
 
 async function _fetchFragment(url) {
