@@ -32,8 +32,8 @@
     border-radius: var(--radius-pill);
     display: flex;
     align-items: center;
-    height: 52px; /* Slightly taller for elegance */
-    padding: 0 var(--sp-6);
+    height: 44px; /* Slightly smaller for mobile */
+    padding: 0 var(--sp-4); /* Tighter padding for mobile */
     /* Soft shadow below + subtle inner light at the top rim */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15),
                 inset 0 1px 1px rgba(255, 255, 255, 0.15),
@@ -43,22 +43,48 @@
                 box-shadow 0.4s ease;
 }
 
-.nav-pill-left { gap: var(--sp-8); }
+@media (min-width: 768px) {
+    .nav-pill {
+        height: 52px;
+        padding: 0 var(--sp-6);
+    }
+}
+
+.nav-pill-left { gap: var(--sp-4); }
+
+@media (min-width: 1024px) {
+    .nav-pill-left { gap: var(--sp-8); }
+}
+
 .nav-pill-right {
     gap: var(--sp-4);
     padding: 6px; /* Adjust padding for the taller pill */
+    display: none; /* Hide entire right pill on mobile to save space */
+}
+
+@media (min-width: 1024px) {
+    .nav-pill-right {
+        display: flex;
+    }
 }
 
 /* ─── Logo ───────────────────────────────────────────── */
 .logo {
     font-family: var(--font-display); /* Use serif for logo */
-    font-size: var(--text-xl);
+    font-size: var(--text-lg); /* Slightly smaller on mobile */
     font-weight: var(--weight-bold);
     color: #fff;
     display: flex;
     align-items: center;
     gap: var(--sp-2);
     transition: opacity 0.2s ease;
+    white-space: nowrap; /* Prevent logo from wrapping */
+}
+
+@media (min-width: 768px) {
+    .logo {
+        font-size: var(--text-xl);
+    }
 }
 
 .logo:hover { opacity: 0.8; }

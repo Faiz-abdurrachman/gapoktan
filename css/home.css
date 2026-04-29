@@ -50,7 +50,7 @@
 
 .page-home .hero-title {
   margin-bottom: var(--sp-6);
-  font-size: var(--text-6xl);
+  font-size: clamp(2.5rem, 8vw, 4.2rem); /* Dynamic clamp for mobile to desktop */
   line-height: var(--leading-tight);
 }
 

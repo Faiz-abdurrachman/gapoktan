@@ -24,8 +24,8 @@ h1, h2, h3, h4, .font-display {
 }
 
 h1 { font-size: var(--text-6xl); }
-h2 { font-size: var(--text-5xl); }
-h3 { font-size: var(--text-3xl); }
+h2 { font-size: clamp(2rem, 6vw, var(--text-5xl)); }
+h3 { font-size: clamp(1.5rem, 4vw, var(--text-3xl)); }
 h4 { font-size: var(--text-xl); }
 
 /* ─── Layout ─────────────────────────────────────────── */
@@ -46,10 +46,11 @@ h4 { font-size: var(--text-xl); }
 
 .grid {
   display: grid;
-  gap: var(--sp-6);
+  gap: var(--sp-8); /* Base gap for stacked mobile elements */
 }
 
 @media (min-width: 768px) {
+  .grid { gap: var(--sp-12); } /* Larger gap for desktop rows */
   .grid-2 { grid-template-columns: repeat(2, 1fr); }
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
   .grid-4 { grid-template-columns: repeat(4, 1fr); }
