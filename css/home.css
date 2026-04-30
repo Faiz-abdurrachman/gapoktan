@@ -23,14 +23,14 @@
   background-size: cover;
   background-position: center;
   z-index: -2;
-  opacity: 0.6; /* Increased for better visibility while keeping it premium */
+  opacity: 0.85; /* Maximum impact for the salak image */
 }
 
 .page-home .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 50%, var(--seed-bg-light) 0%, rgba(249, 248, 246, 0.8) 40%, rgba(249, 248, 246, 0) 100%);
+  background: radial-gradient(circle at 15% 50%, var(--seed-bg-light) 0%, rgba(249, 248, 246, 0.9) 35%, rgba(249, 248, 246, 0) 85%);
   z-index: -1;
 }
 
