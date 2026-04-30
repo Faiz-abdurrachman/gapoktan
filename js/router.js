@@ -197,12 +197,15 @@ document.addEventListener('DOMContentLoaded', async () => {
         try { url = new URL(a.href, location.href); } catch { return; }
         if (url.origin !== location.origin) return;
 
-        if (url.pathname === location.pathname && url.hash) {
+        const normPath = url.pathname.replace(/\/$/, '') || '/';
+        const currPath = location.pathname.replace(/\/$/, '') || '/';
+
+        if (normPath === currPath && url.hash) {
             // Allow native in-page anchor navigation.
             return;
         }
 
-        if (url.pathname === location.pathname) {
+        if (normPath === currPath) {
             // Stay in SPA mode even when user clicks active nav link.
             e.preventDefault();
             return;

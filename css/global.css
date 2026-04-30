@@ -1,5 +1,9 @@
 /* ─── Global Styles (Seed.com Perfect Match) ─────────── */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-body);
   color: var(--seed-text-dark);
