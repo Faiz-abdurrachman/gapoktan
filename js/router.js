@@ -64,6 +64,7 @@ const ROUTES = {
 };
 
 let _activeRouteClass = null;
+let _lastPathname = location.pathname;
 
 function _resolveRoute(pathname) {
     const path = pathname.replace(/\/$/, '') || '/';
@@ -215,14 +216,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         _navigateTo(url.pathname, true);
     });
 
-    let _lastPathname = location.pathname;
+    window.addEventListener('popstate', () => {
+        const currPath = location.pathname.replace(/\/$/, '') || '/';
+        const prevPath = _lastPathname.replace(/\/$/, '') || '/';
 
-window.addEventListener('popstate', () => {
-    if (location.pathname === _lastPathname) {
-        // It's just a hash change, let the browser handle it.
-        return;
-    }
-    _lastPathname = location.pathname;
-    _navigateTo(location.pathname, false);
-});
+        if (currPath === prevPath) {
+            // It's just a hash change, let the browser handle it.
+            return;
+        }
+        _navigateTo(location.pathname, false);
+    });
 });
