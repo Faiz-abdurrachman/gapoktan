@@ -149,6 +149,7 @@ function _runPageInit() {
 }
 
 async function _navigateTo(pathname, push) {
+    _lastPathname = pathname;
     const route = _resolveRoute(pathname);
     let html;
     try {
@@ -211,5 +212,14 @@ document.addEventListener('DOMContentLoaded', async () => {
         _navigateTo(url.pathname, true);
     });
 
-    window.addEventListener('popstate', () => _navigateTo(location.pathname, false));
+    let _lastPathname = location.pathname;
+
+window.addEventListener('popstate', () => {
+    if (location.pathname === _lastPathname) {
+        // It's just a hash change, let the browser handle it.
+        return;
+    }
+    _lastPathname = location.pathname;
+    _navigateTo(location.pathname, false);
+});
 });
