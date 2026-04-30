@@ -150,21 +150,6 @@
     font-size: var(--text-base);
 }
 
-.btn-green {
-    background: var(--green-primary);
-    color: #fff;
-    padding: 8px 20px;
-    border-radius: var(--radius-pill);
-    font-size: var(--text-sm);
-    font-weight: var(--weight-medium);
-    transition: opacity var(--transition-fast);
-    display: inline-block;
-}
-
-.btn-green:hover {
-    opacity: 0.85;
-}
-
 
 /* ─── Featured Product Section ───────────────────────── */
 .umkm-featured {

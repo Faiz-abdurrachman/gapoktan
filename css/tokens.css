@@ -19,10 +19,10 @@
   --bg-white        : #FFFFFF;
   --bg-dark         : var(--seed-bg-dark);
 
-  /* ─── Typography (Serif Heading, Sans-serif Body) ──── */
-  --font-display    : 'Lora', 'Times New Roman', Times, serif; /* Elegant, premium feel for headings */
-  --font-body       : 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; /* Clean, modern, warm sans for body */
-  --font-sans       : var(--font-body); /* Legacy fallback */
+  /* ─── Typography (Modern Serif Heading, Clean Sans Body) ──── */
+  --font-display    : 'Instrument Serif', serif; /* Ultra-modern, high contrast, premium editorial feel */
+  --font-body       : 'Plus Jakarta Sans', system-ui, sans-serif; /* Modern, clean, professional */
+  --font-sans       : var(--font-body);
 
   --text-xs         : 0.75rem;    /* 12px */
   --text-sm         : 0.875rem;   /* 14px */

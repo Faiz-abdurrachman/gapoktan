@@ -129,17 +129,18 @@
 
 .label-pill {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 6px 14px;
   border-radius: var(--radius-pill);
   font-family: var(--font-sans);
-  font-size: 11px;
-  font-weight: var(--weight-semibold);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
   border: 1px solid var(--orange-salak);
-  letter-spacing: var(--tracking-wide);
+  letter-spacing: 0.1em;
   color: var(--orange-salak);
   margin-bottom: var(--sp-4);
-  align-self: flex-start; /* Prevent vertical stretching in flex rows */
-  flex-shrink: 0; /* Prevent horizontal squishing */
+  align-self: flex-start;
+  flex-shrink: 0;
 }
 .label-pill.white {
     color: var(--seed-text-light);
@@ -172,15 +173,22 @@
   border-radius: var(--radius-md);
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
   --card-accent: var(--orange-salak);
   transition: background var(--transition-base),
-              transform 0.4s cubic-bezier(0.34, 1.2, 0.64, 1),
-              box-shadow 0.4s ease;
+              transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+              box-shadow 0.5s ease;
   padding: var(--sp-6);
   border: 1px solid rgba(0,0,0,0.05);
 }
 
-
+.card-body {
+  padding: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
 .card.solid {
     background-color: var(--seed-bg-light);
@@ -198,20 +206,20 @@
 
 .card:hover {
   background-color: rgba(0,0,0,0.03);
-  transform: translateY(-10px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 24px 48px rgba(0,0,0,0.1);
 }
 
 .card.solid:hover {
-    background-color: #eae8e1;
-    transform: translateY(-10px);
-    box-shadow: 0 16px 44px rgba(0,0,0,0.12);
+    background-color: #f0eee6;
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 24px 56px rgba(0,0,0,0.12);
 }
 
 .card.dark:hover {
     background-color: rgba(255,255,255, 0.1);
-    transform: translateY(-10px);
-    box-shadow: 0 20px 56px rgba(0,0,0,0.45);
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 24px 64px rgba(0,0,0,0.35);
 }
 
 .card-image-wrap {

@@ -66,7 +66,7 @@
 
 .agro-feature-list li {
     font-size: var(--text-sm);
-    color: rgba(255, 255, 255, 0.72);
+    color: rgba(255, 255, 255, 0.8);
     padding-left: var(--sp-5);
     position: relative;
 }
@@ -75,50 +75,86 @@
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--orange-salak);
+    color: #fff;
+    opacity: 0.6;
     font-weight: 700;
-}
-
-.agro-feature-list-strong li {
-    color: rgba(255, 255, 255, 0.85);
 }
 
 .agro-package-icon {
     font-size: 1.75rem;
     display: block;
     margin-bottom: var(--sp-6);
-    color: rgba(255, 255, 255, 0.85);
+    color: #fff;
 }
 
 .agro-package-meta {
-    color: rgba(255, 255, 255, 0.5);
-}
-
-.agro-package-meta-strong {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .agro-package-desc {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: var(--text-sm);
-    line-height: var(--leading-normal);
-    margin-bottom: var(--sp-8);
-}
-
-.agro-package-desc-strong {
     color: rgba(255, 255, 255, 0.85);
     font-size: var(--text-sm);
     line-height: var(--leading-normal);
     margin-bottom: var(--sp-8);
 }
 
-.agro-card-highlight {
-    background: var(--orange-salak);
+/* ─── Symmetrical Package Cards ──────────────────────── */
+.agro-packages-grid {
+    align-items: stretch;
 }
 
-.agro-btn-highlight {
+.agro-package-card {
+    height: 100%;
+    border: none !important;
+}
+
+.agro-card-body {
+    flex: 1;
+}
+
+/* ─── Card Colors & Variants ─────────────────────────── */
+.agro-card-green {
+    background-color: var(--seed-bg-dark-elevated);
+}
+.agro-card-green:hover {
+    background-color: #2c5539;
+    box-shadow: 0 20px 60px rgba(27, 54, 36, 0.4);
+}
+
+.agro-card-orange {
+    background-color: var(--orange-salak);
+}
+.agro-card-orange:hover {
+    background-color: #e07a3c;
+    box-shadow: 0 20px 60px rgba(212, 106, 44, 0.4);
+}
+
+.agro-card-brown {
+    background-color: var(--brown-primary);
+}
+.agro-card-brown:hover {
+    background-color: #6d4937;
+    box-shadow: 0 20px 60px rgba(92, 61, 46, 0.4);
+}
+
+.agro-package-card:hover {
+    transform: translateY(-12px) scale(1.02);
+}
+
+/* ─── Consistent Card Buttons ────────────────────────── */
+.btn-outline-card {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(4px);
+}
+
+.btn-outline-card:hover {
     background: #fff;
-    color: var(--orange-salak);
+    color: var(--seed-text-dark);
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .agro-copy-520 {

@@ -112,7 +112,7 @@ function renderProducts(products) {
                 <h3 class="mb-2 text-lg">${p.name}</h3>
                 <span class="product-price">${p.price}</span>
                 <p class="text-xs text-content mb-6">${p.desc}</p>
-                <a href="https://wa.me/6281234567892?text=Halo KWT Ngudi Luhur, saya ingin pesan ${p.name}" class="btn btn-green btn-sm" target="_blank"><span class="icon icon-whatsapp mr-6"></span>Pesan via WhatsApp</a>
+                <a href="https://wa.me/6281234567892?text=Halo KWT Ngudi Luhur, saya ingin pesan ${p.name}" class="btn btn-primary btn-sm mt-auto" target="_blank"><span class="icon icon-whatsapp mr-6"></span>Pesan via WhatsApp</a>
             </div>
         `;
         
