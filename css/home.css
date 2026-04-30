@@ -21,16 +21,16 @@
   inset: 0;
   background-image: url('../assets/images/hero/section1.webp');
   background-size: cover;
-  background-position: right center;
+  background-position: center; /* Better centering for all screens */
   z-index: -2;
-  opacity: 0.9;
+  opacity: 0.15; /* Much lower to maintain elite readability */
 }
 
 .page-home .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, var(--seed-bg-light) 35%, rgba(249, 248, 246, 0.9) 50%, rgba(249, 248, 246, 0) 80%);
+  background: radial-gradient(circle at 20% 50%, var(--seed-bg-light) 0%, rgba(249, 248, 246, 0.95) 40%, rgba(249, 248, 246, 0.4) 100%);
   z-index: -1;
 }
 
@@ -127,14 +127,18 @@
 
 .page-home .counter-number {
   font-family: var(--font-display);
-  font-size: var(--text-5xl);
-  font-weight: var(--weight-medium);
+  font-size: var(--text-6xl);
+  font-weight: 400; /* Respecting Instrument Serif 400 standard */
   margin-bottom: var(--sp-2);
+  color: var(--orange-salak);
 }
 
 .page-home .counter-label {
   font-size: var(--text-sm);
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 /* ─── [S3] About Section ────────────────────────────── */
