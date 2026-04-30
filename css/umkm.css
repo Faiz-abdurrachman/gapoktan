@@ -140,6 +140,7 @@
 /* ─── Product Card ───────────────────────────────────── */
 .product-card .card-body {
     text-align: center;
+    padding-top: var(--sp-2);
 }
 
 .product-price {

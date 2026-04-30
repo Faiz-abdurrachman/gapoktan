@@ -235,7 +235,7 @@
 .card-image-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Like product shots */
+  object-fit: cover; /* Cover is better for grid consistency */
   transition: transform var(--transition-slow);
 }
 
