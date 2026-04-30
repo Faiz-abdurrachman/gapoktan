@@ -67,7 +67,8 @@ let _activeRouteClass = null;
 let _lastPathname = location.pathname;
 
 function _resolveRoute(pathname) {
-    const path = pathname.replace(/\/$/, '') || '/';
+    let path = pathname.replace(/\/$/, '') || '/';
+    if (path === '/index.html') path = '/';
     return ROUTES[path] || ROUTES['404'];
 }
 
