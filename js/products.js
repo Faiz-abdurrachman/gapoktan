@@ -25,7 +25,7 @@ const PRODUCTS = [
         name: "Kopi Biji Salak",
         category: "minuman",
         price: "Rp 45.000",
-        image: "assets/images/umkm/product_8.webp",
+        image: "assets/images/DSC04989.JPG",
         desc: "Inovasi minuman menyehatkan tanpa kafein dari biji salak pilihan."
     },
     {
@@ -41,7 +41,7 @@ const PRODUCTS = [
         name: "Bakpia Salak",
         category: "makanan",
         price: "Rp 30.000",
-        image: "assets/images/umkm/product_8.webp",
+        image: "assets/images/hero/DSC05001.webp",
         desc: "Khas Jogja-Magelang dengan isian salak yang lumer di mulut."
     },
     {
@@ -49,7 +49,7 @@ const PRODUCTS = [
         name: "Manisan Salak",
         category: "makanan",
         price: "Rp 15.000",
-        image: "assets/images/umkm/product_8.webp",
+        image: "assets/images/hero/DSC04986.webp",
         desc: "Buah salak segar dalam rendaman sirup yang manis dan menyegarkan."
     },
     {
@@ -57,7 +57,7 @@ const PRODUCTS = [
         name: "Selai Salak",
         category: "makanan",
         price: "Rp 20.000",
-        image: "assets/images/umkm/product_8.webp",
+        image: "assets/images/hero/DSC04983.webp",
         desc: "Olesan manis dari salak Nglumut pilihan — sempurna untuk sarapan dan camilan keluarga."
     },
     {
